@@ -1,11 +1,14 @@
 from dotenv import load_dotenv
 import os
+import json
 import sys
 import pandas as pd
 import numpy as np
 import streamlit as st
 from langchain.chat_models import ChatOpenAI
+from langchain.memory import ConversationBufferMemory
 from langchain.agents import create_pandas_dataframe_agent
+import matplotlib.pyplot as plt
 
 import streamlit as st
 from streamlit_chat import message
@@ -19,15 +22,48 @@ def send_click():
     if st.session_state.user != '':
         prompt = st.session_state.user
         user_prompt = prompt.strip().replace(" ", "").lower()
+        response = ""
 
-        top = ["top5", "topfive", "1stfive", "1st5", "first5", "firstfive"]
-        bottom = ["last5", "lastfive", "bottom5", "bottomfive"]
-        if any([x in user_prompt for x in top]):
-            response = "Here are the Top 5 transactions"
-        elif any([x in user_prompt for x in bottom]):
-            response = "Here are the Bottom/Last 5 transactions"
-        else:
-            response = agent.run(prompt)
+        top = ["top5row", "topfiverow", "1stfiverow", "1st5row", "first5row", "firstfiverow", "top5ob", "topfiveob", "1stfiveob", "1st5ob", "first5ob", "firstfiveob", "top5tran", "topfiveobtran", "1stfiveobtran", "1st5obtran", "first5obtran", "firstfiveobtran"]
+        bottom = ["last5row", "lastfiverow", "bottom5row", "bottomfiverow", "last5ob", "lastfiveob", "bottom5ob", "bottomfiveob", "last5tran", "lastfivetran", "bottom5tran", "bottomfivetran"]
+        top_debit = ["top5debit", "topfivedebit", "1stfivedebit", "1st5debit", "first5debit", "firstfivedebit"]
+        bottom_debit = ["last5debit", "lastfivedebit", "bottom5debit", "bottomfivedebit"]
+        top_credit = ["top5credit", "topfivecredit", "1stfivecredit", "1st5credit", "first5credit", "firstfivecredit"]
+        bottom_credit = ["last5credit", "lastfivecredit", "bottom5credit", "bottomfivecredit"]
+
+        top_condn = any([x in user_prompt for x in top])
+        bottom_condn = any([x in user_prompt for x in bottom])
+        top_debit_condn = any([x in user_prompt for x in top_debit])
+        bottom_debit_condn = any([x in user_prompt for x in bottom_debit])
+        top_credit_condn = any([x in user_prompt for x in top_credit])
+        bottom_credit_condn = any([x in user_prompt for x in bottom_credit])
+
+        if top_debit_condn:
+            response += "The Top 5 debit transactions, "
+        if top_credit_condn:
+            response += "The Top 5 credit transactions, "
+        if top_condn:
+            response += "The Top 5 transactions, "
+
+        if bottom_debit_condn:
+            response += "The Bottom/Last 5 debit transactions, "
+        if bottom_credit_condn:
+            response += "The Bottom/Last 5 credit transactions, "
+        if bottom_condn:
+            response += "The Bottom/Last 5 transactions, "
+
+        if not top_condn and not bottom_condn and not top_debit_condn and not top_credit_condn and not bottom_debit_condn and not bottom_credit_condn:
+            try:
+                response = agent.run("""
+                For the following query:
+                If it is just asking a question that doesn't require to display multiple rows or plot a graph or chart return the response as it is.
+                If it requires to plot a graph or chart, show multiple rows or observations return the data in a JSON format. If it is a bar graph or chart assign the data to the key "bar", if it is a line graph or chart assign the data to the key "line", if it is a pie chart or graph assign the data to the key "pie", if it is a dataframe or table with multiple rows assign the data to the key "multiple". For graphs and charts, assign the X-axis data to JSON key "x" and Y-axis data to JSON key "y". Convert all the list to string. Return all the output as a string. 
+                Here is the query: {}
+                """.format(prompt))
+                print("Response: ", response)
+            except Exception as e:
+                print("Error: ", e)
+                response = "Sorry, unable to answer, try asking in a simpler way!"
 
         st.session_state.prompts.append(prompt)
         st.session_state.responses.append(response)
@@ -36,6 +72,17 @@ def send_click():
 def convert_df(df):
      # IMPORTANT: Cache the conversion to prevent computation on every rerun
      return df.to_csv(index=False).encode('utf-8')
+
+def validateJSON(jsonData):
+    try:
+        result = json.loads(jsonData) and type(json.loads(jsonData)) is dict
+        if result:
+            return True
+        else:
+            return False
+    except ValueError as err:
+        return False
+
 
 if 'prompts' not in st.session_state:
     st.session_state.prompts = []
@@ -77,18 +124,84 @@ if uploaded_file is not None:
     if st.session_state.prompts:
         for i in range(len(st.session_state.responses)):
             user_prompt = st.session_state.prompts[i].strip().replace(" ", "").lower()
-            top = ["top5", "topfive", "1stfive", "1st5", "first5", "firstfive"]
-            bottom = ["last5", "lastfive", "bottom5", "bottomfive"]
+            top = ["top5row", "topfiverow", "1stfiverow", "1st5row", "first5row", "firstfiverow", "top5ob", "topfiveob", "1stfiveob", "1st5ob", "first5ob", "firstfiveob", "top5tran", "topfiveobtran", "1stfiveobtran", "1st5obtran", "first5obtran", "firstfiveobtran"]
+            bottom = ["last5row", "lastfiverow", "bottom5row", "bottomfiverow", "last5ob", "lastfiveob", "bottom5ob", "bottomfiveob", "last5tran", "lastfivetran", "bottom5tran", "bottomfivetran"]
+            top_debit = ["top5debit", "topfivedebit", "1stfivedebit", "1st5debit", "first5debit", "firstfivedebit"]
+            bottom_debit = ["last5debit", "lastfivedebit", "bottom5debit", "bottomfivedebit"]
+            top_credit = ["top5credit", "topfivecredit", "1stfivecredit", "1st5credit", "first5credit", "firstfivecredit"]
+            bottom_credit = ["last5credit", "lastfivecredit", "bottom5credit", "bottomfivecredit"]
+
+            top_condn = any([x in user_prompt for x in top])
+            bottom_condn = any([x in user_prompt for x in bottom])
+            top_debit_condn = any([x in user_prompt for x in top_debit])
+            bottom_debit_condn = any([x in user_prompt for x in bottom_debit])
+            top_credit_condn = any([x in user_prompt for x in top_credit])
+            bottom_credit_condn = any([x in user_prompt for x in bottom_credit])
 
             message(st.session_state.prompts[i], is_user=True, key=str(i) + '_user', seed=83)
-            message(st.session_state.responses[i], key=str(i), seed='Milo')
 
-            if any([x in user_prompt for x in top]):
-                st.dataframe(df.head())
-            elif any([x in user_prompt for x in bottom]):
-                st.dataframe(df.tail())
+            if validateJSON(st.session_state.responses[i]) == False:
+                message(st.session_state.responses[i], key=str(i), seed='Milo')
+            elif validateJSON(st.session_state.responses[i]) == True:
+                result = json.loads(st.session_state.responses[i])
+                if result.get("bar"):
+                    try:
+                        plot_df = pd.DataFrame(result["bar"])
+                        print(plot_df)
+                        message("The bar chart is plotted,", key=str(i), seed='Milo')
+                        st.bar_chart(plot_df, x="x", y="y")
+                    except Exception as e:
+                        message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
+                if result.get("line"):
+                    try:
+                        plot_df = pd.DataFrame(result["line"])
+                        message("The line graph is plotted,", key=str(i), seed='Milo')
+                        st.line_chart(plot_df, x="x", y="y")
+                    except Exception as e:
+                        message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
+                if result.get("pie"):
+                    try:
+                        plot_df = pd.DataFrame(result["pie"])
+                        message("The pie chart is plotted,", key=str(i), seed='Milo')
+                        fig, ax = plt.subplots(figsize=(5, 5))
+                        ax.pie(plot_df["y"], labels=plot_df["x"], wedgeprops = { 'linewidth' : 2, 'edgecolor' : 'white'})
+                        #display a white circle in the middle of the pie chart
+                        p = plt.gcf()
+                        p.gca().add_artist(plt.Circle( (0,0), 0.7, color='white'))
+                        st.pyplot(fig)
+                    except Exception as e:
+                        message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
+                if result.get("multiple"):
+                    try:
+                        plot_df = pd.DataFrame(result["multiple"])
+                        message("The result transactions are,", key=str(i), seed='Milo')
+                        st.dataframe(plot_df)
+                    except Exception as e:
+                        message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
+                if not result.get("bar") and not result.get("line") and not result.get("pie") and not result.get("multiple"):
+                    try:
+                        message(st.session_state.responses[i], key=str(i), seed='Milo')
+                    except Exception as e:
+                        message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
             else:
-                pass
+                try:
+                    message(st.session_state.responses[i], key=str(i), seed='Milo')
+                except Exception as e:
+                    message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
+
+            if top_credit_condn:
+                st.dataframe(df.loc[df["transactionValue"] > 0].head())
+            if top_debit_condn:
+                st.dataframe(df.loc[df["transactionValue"] < 0].head())
+            if top_condn:
+                st.dataframe(df.head())
+
+            if bottom_debit_condn:
+                st.dataframe(df.loc[df["transactionValue"] < 0].tail())
+            if bottom_credit_condn:
+                st.dataframe(df.loc[df["transactionValue"] > 0].tail())
+            if bottom_condn:
+                st.dataframe(df.tail())
             
     if chat_btn or st.session_state.chat_btn_active:
         st.text_input("Ask Something:", key="user")
