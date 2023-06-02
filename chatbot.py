@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from streamlit_chat import message
 
+from controllers import (validateJSON)
 
 load_dotenv()
 
@@ -26,18 +27,36 @@ def send_click():
 
         top = ["top5row", "topfiverow", "1stfiverow", "1st5row", "first5row", "firstfiverow", "top5ob", "topfiveob", "1stfiveob", "1st5ob", "first5ob", "firstfiveob", "top5tran", "topfiveobtran", "1stfiveobtran", "1st5obtran", "first5obtran", "firstfiveobtran"]
         bottom = ["last5row", "lastfiverow", "bottom5row", "bottomfiverow", "last5ob", "lastfiveob", "bottom5ob", "bottomfiveob", "last5tran", "lastfivetran", "bottom5tran", "bottomfivetran"]
+        top_high = ["top5highesttran", "topfivehighesttran", "1stfivehighesttran", "1st5highesttran", "first5highesttran", "firstfivehighesttran"]
+        bottom_low = ["lowest5tran", "lowestfivetran"]           
         top_debit = ["top5debit", "topfivedebit", "1stfivedebit", "1st5debit", "first5debit", "firstfivedebit"]
-        bottom_debit = ["last5debit", "lastfivedebit", "bottom5debit", "bottomfivedebit"]
+        bottom_debit = ["last5debit", "lastfivedebit", "bottom5debit", "bottomfivedebit"]            
+        top_debit_high = ["top5highestdebit", "topfivehighestdebit", "1stfivehighestdebit", "1st5highestdebit", "first5highestdebit", "firstfivehighestdebit"]
+        bottom_debit_low = ["lowest5debit", "lowestfivedebit"]            
         top_credit = ["top5credit", "topfivecredit", "1stfivecredit", "1st5credit", "first5credit", "firstfivecredit"]
-        bottom_credit = ["last5credit", "lastfivecredit", "bottom5credit", "bottomfivecredit"]
+        bottom_credit = ["last5credit", "lastfivecredit", "bottom5credit", "bottomfivecredit"]            
+        top_credit_high = ["top5highestcredit", "topfivehighestcredit", "1stfivehighestcredit", "1st5highestcredit", "first5highestcredit", "firstfivehighestcredit"]
+        bottom_credit_low = ["lowest5credit", "lowestfivecredit"]
 
         top_condn = any([x in user_prompt for x in top])
         bottom_condn = any([x in user_prompt for x in bottom])
+        top_high_condn = any([x in user_prompt for x in top_high])
+        low_condn = any([x in user_prompt for x in bottom_low])
         top_debit_condn = any([x in user_prompt for x in top_debit])
         bottom_debit_condn = any([x in user_prompt for x in bottom_debit])
+        top_debit_high_condn = any([x in user_prompt for x in top_debit_high])
+        low_debit_condn = any([x in user_prompt for x in bottom_debit_low])
         top_credit_condn = any([x in user_prompt for x in top_credit])
         bottom_credit_condn = any([x in user_prompt for x in bottom_credit])
+        top_credit_high_condn = any([x in user_prompt for x in top_credit_high])
+        low_credit_condn = any([x in user_prompt for x in bottom_credit_low])
 
+        if top_debit_high_condn:
+            response += "The Top 5 highest debit transactions, "
+        if top_credit_high_condn:
+            response += "The Top 5 highest credit transactions, "
+        if top_high_condn:
+            response += "The Top 5 highest transactions, "
         if top_debit_condn:
             response += "The Top 5 debit transactions, "
         if top_credit_condn:
@@ -45,6 +64,12 @@ def send_click():
         if top_condn:
             response += "The Top 5 transactions, "
 
+        if low_debit_condn:
+            response += "The Lowest 5 debit transactions, "
+        if low_credit_condn:
+            response += "The Lowest 5 credit transactions, "
+        if low_condn:
+            response += "The Lowest 5 transactions, "
         if bottom_debit_condn:
             response += "The Bottom/Last 5 debit transactions, "
         if bottom_credit_condn:
@@ -52,12 +77,13 @@ def send_click():
         if bottom_condn:
             response += "The Bottom/Last 5 transactions, "
 
-        if not top_condn and not bottom_condn and not top_debit_condn and not top_credit_condn and not bottom_debit_condn and not bottom_credit_condn:
+        if not top_condn and not bottom_condn and not top_debit_condn and not top_credit_condn and not bottom_debit_condn and not bottom_credit_condn and not top_high_condn and not top_debit_high_condn and not top_credit_high_condn and not low_condn and not low_debit_condn and not low_credit_condn:
             try:
                 response = agent.run("""
                 For the following query:
-                If it is just asking a question that doesn't require to display multiple rows or plot a graph or chart return the response as it is.
-                If it requires to plot a graph or chart, show multiple rows or observations return the data in a JSON format. If it is a bar graph or chart assign the data to the key "bar", if it is a line graph or chart assign the data to the key "line", if it is a pie chart or graph assign the data to the key "pie", if it is a dataframe or table with multiple rows assign the data to the key "multiple". For graphs and charts, assign the X-axis data to JSON key "x" and Y-axis data to JSON key "y". Convert all the list to string. Return all the output as a string. 
+                If it is just asking a question that do not require to display dataframe or multiple rows or plot a graph or chart return the response as it is.
+                If it requires to plot a graph or chart return the data in a JSON format. If it is a bar graph or chart assign the data to the key "bar", if it is a line graph or chart assign the data to the key "line", if it is a pie chart or graph assign the data to the key "pie". For graphs and charts, assign the X-axis data to JSON key "x" and Y-axis data to JSON key "y". Convert all the list to string. Return all the output as a string. 
+                If it requires to display a dataframe or table or multiple rows instead of plotting a graph or chart assign the data to the JSON key "multiple". Convert all the list to string. Return all the output as a string.
                 Here is the query: {}
                 """.format(prompt))
                 print("Response: ", response)
@@ -67,21 +93,12 @@ def send_click():
 
         st.session_state.prompts.append(prompt)
         st.session_state.responses.append(response)
+        st.session_state.user = ""
 
 @st.cache_data
 def convert_df(df):
      # IMPORTANT: Cache the conversion to prevent computation on every rerun
      return df.to_csv(index=False).encode('utf-8')
-
-def validateJSON(jsonData):
-    try:
-        result = json.loads(jsonData) and type(json.loads(jsonData)) is dict
-        if result:
-            return True
-        else:
-            return False
-    except ValueError as err:
-        return False
 
 
 if 'prompts' not in st.session_state:
@@ -126,17 +143,29 @@ if uploaded_file is not None:
             user_prompt = st.session_state.prompts[i].strip().replace(" ", "").lower()
             top = ["top5row", "topfiverow", "1stfiverow", "1st5row", "first5row", "firstfiverow", "top5ob", "topfiveob", "1stfiveob", "1st5ob", "first5ob", "firstfiveob", "top5tran", "topfiveobtran", "1stfiveobtran", "1st5obtran", "first5obtran", "firstfiveobtran"]
             bottom = ["last5row", "lastfiverow", "bottom5row", "bottomfiverow", "last5ob", "lastfiveob", "bottom5ob", "bottomfiveob", "last5tran", "lastfivetran", "bottom5tran", "bottomfivetran"]
+            top_high = ["top5highesttran", "topfivehighesttran", "1stfivehighesttran", "1st5highesttran", "first5highesttran", "firstfivehighesttran"]
+            bottom_low = ["lowest5tran", "lowestfivetran"]           
             top_debit = ["top5debit", "topfivedebit", "1stfivedebit", "1st5debit", "first5debit", "firstfivedebit"]
-            bottom_debit = ["last5debit", "lastfivedebit", "bottom5debit", "bottomfivedebit"]
+            bottom_debit = ["last5debit", "lastfivedebit", "bottom5debit", "bottomfivedebit"]            
+            top_debit_high = ["top5highestdebit", "topfivehighestdebit", "1stfivehighestdebit", "1st5highestdebit", "first5highestdebit", "firstfivehighestdebit"]
+            bottom_debit_low = ["lowest5debit", "lowestfivedebit"]            
             top_credit = ["top5credit", "topfivecredit", "1stfivecredit", "1st5credit", "first5credit", "firstfivecredit"]
-            bottom_credit = ["last5credit", "lastfivecredit", "bottom5credit", "bottomfivecredit"]
+            bottom_credit = ["last5credit", "lastfivecredit", "bottom5credit", "bottomfivecredit"]            
+            top_credit_high = ["top5highestcredit", "topfivehighestcredit", "1stfivehighestcredit", "1st5highestcredit", "first5highestcredit", "firstfivehighestcredit"]
+            bottom_credit_low = ["lowest5credit", "lowestfivecredit"]
 
             top_condn = any([x in user_prompt for x in top])
             bottom_condn = any([x in user_prompt for x in bottom])
+            top_high_condn = any([x in user_prompt for x in top_high])
+            low_condn = any([x in user_prompt for x in bottom_low])
             top_debit_condn = any([x in user_prompt for x in top_debit])
             bottom_debit_condn = any([x in user_prompt for x in bottom_debit])
+            top_debit_high_condn = any([x in user_prompt for x in top_debit_high])
+            low_debit_condn = any([x in user_prompt for x in bottom_debit_low])
             top_credit_condn = any([x in user_prompt for x in top_credit])
             bottom_credit_condn = any([x in user_prompt for x in bottom_credit])
+            top_credit_high_condn = any([x in user_prompt for x in top_credit_high])
+            low_credit_condn = any([x in user_prompt for x in bottom_credit_low])
 
             message(st.session_state.prompts[i], is_user=True, key=str(i) + '_user', seed=83)
 
@@ -147,7 +176,6 @@ if uploaded_file is not None:
                 if result.get("bar"):
                     try:
                         plot_df = pd.DataFrame(result["bar"])
-                        print(plot_df)
                         message("The bar chart is plotted,", key=str(i), seed='Milo')
                         st.bar_chart(plot_df, x="x", y="y")
                     except Exception as e:
@@ -189,6 +217,16 @@ if uploaded_file is not None:
                 except Exception as e:
                     message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
 
+            if top_debit_high_condn:
+                top_df = df.loc[df["transactionValue"] < 0]
+                top_df["transactionValue"] = abs(top_df["transactionValue"])
+                st.dataframe(top_df.nlargest(5, ['transactionValue']))
+            if top_credit_high_condn:
+                st.dataframe(df.loc[df["transactionValue"] > 0].nlargest(5, ['transactionValue']))
+            if top_high_condn:
+                top_df = df.copy()
+                top_df["transactionValue"] = abs(top_df["transactionValue"])
+                st.dataframe(top_df.nlargest(5, ['transactionValue']))
             if top_credit_condn:
                 st.dataframe(df.loc[df["transactionValue"] > 0].head())
             if top_debit_condn:
@@ -196,6 +234,16 @@ if uploaded_file is not None:
             if top_condn:
                 st.dataframe(df.head())
 
+            if low_debit_condn:
+                top_df = df.loc[df["transactionValue"] < 0]
+                top_df["transactionValue"] = abs(top_df["transactionValue"])
+                st.dataframe(top_df.nsmallest(5, ['transactionValue']))
+            if low_credit_condn:
+                st.dataframe(df.loc[df["transactionValue"] > 0].nsmallest(5, ['transactionValue']))
+            if low_condn:
+                top_df = df.copy()
+                top_df["transactionValue"] = abs(top_df["transactionValue"])
+                st.dataframe(top_df.nsmallest(5, ['transactionValue']))
             if bottom_debit_condn:
                 st.dataframe(df.loc[df["transactionValue"] < 0].tail())
             if bottom_credit_condn:
