@@ -1,527 +1,236 @@
-date,description,balance,transactionValue,transactionType,bankName,category
-26-12-2022,INB/IFT/Anup/TPARTY TRANSFER,10000.0,138471.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-12-2022,INB/IFT/TARAK/TPARTY TRANSFER,10000.0,128471.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-12-2022,INB/NEFT/AXIC223606226742/PRONAY/Transport Expens,2690.0,125781.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-12-2022,INB/NEFT/AXIC223606278974/Kazi Mohibul/Salary,9500.0,116281.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-12-2022,INB/NEFT/AXIC223606279413/Nirmal Bag/Salary,6500.0,109781.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-12-2022,UPI/P2A/236076144842/IJAUL DEH/Punjab Na/Payment,50000.0,159781.3,credit,Axis Bank,Revenue-UPI
-26-12-2022,INB/NEFT/AXIC223606405884/Manirul Islam/Salary,7000.0,152781.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-12-2022,UPI/P2M/236063286162/INJAMAMUL/Canara Ba/Payment,45000.0,197781.3,credit,Axis Bank,Revenue-UPI
-27-12-2022,UPI/P2A/236158530595/DIPANKAR /HDFC BANK/Payment,10000.0,207781.3,credit,Axis Bank,Revenue-UPI
-28-12-2022,INB/IFT/Anup/TPARTY TRANSFER,10000.0,197781.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-12-2022,INB/NEFT/AXIC223627024475/Surobhi Agro/Payment,40000.0,157781.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-12-2022,INB/NEFT/AXIC223627024651/PRONAY/Transport Expens,5000.0,152781.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-12-2022,NEFT/PUNBH22362617722/MD ATIAR MOLLA//NEFT/,30000.0,182781.3,credit,Axis Bank,Transfer-in/Revenue-other
-28-12-2022,UPI/P2M/236252282693/ABDUL MAR/Punjab Na/Payment,1345.0,184126.3,credit,Axis Bank,Revenue-UPI
-29-12-2022,INB/NEFT/AXIC223637397860/ALLIGO HORIZON P/Paymen,25000.0,159126.3,debit,Axis Bank,Transfer-in/Revenue-other
-29-12-2022,BANKU,10000.0,169126.3,credit,Axis Bank,Transfer-in/Revenue-other
-29-12-2022,INB/NEFT/AXIC223637655714/Surobhi Agro/Payment,13000.0,156126.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-12-2022,INB/NEFT/AXIC223647948629/PRONAY/Transport Expens,7802.0,148324.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-12-2022,DAS//ATTN/PAYMENT,50000.0,198324.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-12-2022,IMPS/P2A/236417741487/SELIMBIS/PUNJABNA/selim,20000.0,218324.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-12-2022,INB/IFT/TARAK/TPARTY TRANSFER,16000.0,202324.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-12-2022,INB/IFT/Anup/TPARTY TRANSFER,10000.0,192324.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-12-2022,IMPS/P2A/236423019412/DEGANGAB/BandhanB/remark,20000.0,212324.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-12-2022,NEFT/CBINH22365322024/Mr. MIRJA MOHIRUDDIN///URGE,70000.0,282324.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-12-2022,MOB/TPFT/KAILASH CHAND A/916020027393600,24500.0,306824.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-12-2022,UPI/P2A/236559364070/SK RAFICK/State Ban/Payment,30000.0,336824.3,credit,Axis Bank,Revenue-UPI
-31-12-2022,UPI/P2M/236501228096/BIJOY ROY/HDFC BANK/UPI,20000.0,356824.3,credit,Axis Bank,Revenue-UPI
-01-01-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,346824.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,INB/NEFT/AXIC230028855930/Anup Ganguly/Salary,49800.0,297024.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,INB/NEFT/AXIC230028927786/Ad CONCEPT/Payment,15000.0,282024.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,INB/NEFT/AXIC230028927118/PRONAY/Transport Expens,6028.0,275996.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,INB/NEFT/AXIC230028931140/KASA DEVELO/Factory Ren,25000.0,250996.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,NEFT/PUNBH23002673064/PRODYUT KUMAR SARKAR,50000.0,300996.3,credit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,INB/NEFT/AXIC230029023019/Kamal Modi and s/paymen,35000.0,265996.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-01-2023,INB/NEFT/AXIC230029087785//transport and office e,5740.0,260256.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-01-2023,By Clg 085609 808  Jalpaiguri,10000.0,270256.3,credit,Axis Bank,Cash/cheque deposit
-03-01-2023,INB/NEFT/AXIC230039878359/Subrata Ganguly/Salary,25000.0,245256.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-01-2023,INB/NEFT/AXIC230039879463/PRONAY JASH/Office rent,11600.0,233656.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-01-2023,NEFT/BDBLH23632101332/KISHAN BIKASH ENTERPRISE//2,75000.0,308656.3,credit,Axis Bank,Transfer-in/Revenue-other
-03-01-2023,INB/NEFT/AXIC230030072723/Malay Sen/Salary,8000.0,300656.3,debit,Axis Bank,Transfer-in/Revenue-other
-04-01-2023,INB/IFT/TARAK/TPARTY TRANSFER,44850.0,255806.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-01-2023,INB/NEFT/AXIC230050665236/Ananya Maiti/salary,10390.0,245416.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-01-2023,INB/NEFT/AXIC230050665233/PRONAY JASH/salary,17890.0,227526.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-01-2023,INB/NEFT/AXIC230050665235/Rajesh Ghosh/Salary,10390.0,217136.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-01-2023,INB/NEFT/AXIC230050665327/Krishna Ganguly/Salary,7500.0,209636.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-01-2023,INB/NEFT/AXIC230050665237/MANAJIT MAJI/Salary,13390.0,196246.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-01-2023,SAK/CASH DEP/SAK325288095/1131/SELF,15000.0,211246.3,credit,Axis Bank,Cash/cheque deposit
-05-01-2023,UPI/P2A/300586812710/LAXMIKANT/Axis Bank/UPI,50000.0,261246.3,credit,Axis Bank,Revenue-UPI
-06-01-2023,INB/IFT/AMRITA/TPARTY TRANSFER,14890.0,246356.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061203585/PINTU MONDAL/Salary,24870.0,221486.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061203531/Gautam Jana/salary,11890.0,209596.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061203533/KALYAN MUKHERJEE/Salary,12890.0,196706.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061203584/ANIMESH MONDAL/Salary,24870.0,171836.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/IFT/TARAK/TPARTY TRANSFER,30000.0,141836.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061213019/Jyotirmay Bhunia/Salary,10000.0,131836.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,UPI/P2A/300626923747/LAXMIKANT/Axis Bank/UPI,20000.0,151836.3,credit,Axis Bank,Revenue-UPI
-06-01-2023,"NEFT/SBIN423006438636/SISIR KUMARMONDAL//ATTN/TR",15000.0,166836.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061678456/Ramesh Ad/Labour expens,19860.0,146976.3,debit,Axis Bank,Transfer-in/Revenue-other
-08-01-2023,UPI/P2M/300865178170/INJAMAMUL/Canara Ba/Payment,25000.0,171976.3,credit,Axis Bank,Revenue-UPI
-09-01-2023,NEFT/BDCBN23009352770/KALIPADA  BASU,50000.0,221976.3,credit,Axis Bank,Transfer-in/Revenue-other
-09-01-2023,"NEFT/UCBAH23009211007/MAITY KRISHIBHANDAR//FAST/",32000.0,253976.3,credit,Axis Bank,Transfer-in/Revenue-other
-10-01-2023,UPI/P2A/301074047399/SK ZAKIR /Axis Bank/Payment,40000.0,293976.3,credit,Axis Bank,Revenue-UPI
-10-01-2023,"NEFT/BDBLH23632750627/ANUPAM SAHA//2 -CUSTOMER/1",30000.0,323976.3,credit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,INB/IFT/TARAK/TPARTY TRANSFER,25000.0,298976.3,debit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,INB/NEFT/AXIC230113772521/Surobhi Agro/payment,30000.0,268976.3,debit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,INB/NEFT/AXIC230113771264/ALLIGO HORIZON P/paymen,30000.0,238976.3,debit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,SAK/CASH DEP/SAK326265527/1131/SELF,10000.0,248976.3,credit,Axis Bank,Cash/cheque deposit
-12-01-2023,INB/NEFT/AXIC230124293297/PROXICHEM/payment,1339.0,247637.3,debit,Axis Bank,Transfer-in/Revenue-other
-12-01-2023,INB/NEFT/AXIC230124392057/PRONAY JASH/expense,14947.0,232690.3,debit,Axis Bank,Transfer-in/Revenue-other
-12-01-2023,INB/NEFT/AXIC230124415665/Reckon Advertisi/paymen,12000.0,220690.3,debit,Axis Bank,Transfer-in/Revenue-other
-13-01-2023,"NEFT/WBSCN23013226162/MANOJIT ROY/ATTN/MANOJITRO",40000.0,260690.3,credit,Axis Bank,Transfer-in/Revenue-other
-13-01-2023,NEFT/PUNBH23013614109/PRODYUT KUMAR SARKAR,50000.0,310690.3,credit,Axis Bank,Transfer-in/Revenue-other
-13-01-2023,INB/NEFT/AXIC230134997955/ANIMESH MONDAL/Expense,10000.0,300690.3,debit,Axis Bank,Transfer-in/Revenue-other
-14-01-2023,UPI/P2M/301464643143/BAPI KUND/IDBI Bank/Payment,15000.0,315690.3,credit,Axis Bank,Revenue-UPI
-14-01-2023,INB/NEFT/AXIC230145267645/PRONAY JA/Expense banne,1500.0,314190.3,debit,Axis Bank,Transfer-in/Revenue-other
-14-01-2023,UPI/P2A/301486680762/LAXMIKANT/Axis Bank/UPI,45000.0,359190.3,credit,Axis Bank,Revenue-UPI
-14-01-2023,GST @18% on Charge,27.0,359163.3,debit,Axis Bank,Tax/other-credit
-14-01-2023,Consolidated Charges for A/c,150.0,359013.3,debit,Axis Bank,Transfer-in/Revenue-other
-16-01-2023,IMPS/P2A/301642949277/SUSHILGH/UCOBANK/SurobhiA,50000.0,409013.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-01-2023,NEFT/PUNBH23016188901/ALOKE KUM/PUNJAB NA/,100000.0,509013.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-01-2023,INB/NEFT/AXIC230165825537/Surobhi Agro/Payment,30000.0,479013.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-01-2023,INB/NEFT/AXIC230175867932/PRONAY JASH/Expense,4500.0,474513.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-01-2023,By Clg 000026 028  Arambagh,18888.0,493401.3,credit,Axis Bank,Cash/cheque deposit
-17-01-2023,IMPS/P2A/301743511322/SUSHILGH/UCOBANK/SurobhiA,50000.0,543401.3,credit,Axis Bank,Transfer-in/Revenue-other
-18-01-2023,SAK/CASH DEP/SAK327127796/1131/SELF,13000.0,556401.3,credit,Axis Bank,Cash/cheque deposit
-18-01-2023,"NEFT/SBIN123018424084/RAMESWAR /STATEBAN//ATTN/B",200000.0,756401.3,credit,Axis Bank,Transfer-in/Revenue-other
-18-01-2023,INB/NEFT/AXIC230186501677/PRONAY/Transport Expens,7600.0,748801.3,debit,Axis Bank,Transfer-in/Revenue-other
-18-01-2023,INB/714957500/GST TAX PAYMENT/,21864.0,726937.3,debit,Axis Bank,Tax/other-credit
-19-01-2023,INB/NEFT/AXIC230196609070/Surobhi Agro/Payment,60000.0,666937.3,debit,Axis Bank,Transfer-in/Revenue-other
-19-01-2023,By Clg 451850 024  Arambagh,50000.0,716937.3,credit,Axis Bank,Cash/cheque deposit
-19-01-2023,"BY CASH DEPOSIT-BNA/DPRH294901/4926/190123/BARDDHA",50000.0,766937.3,credit,Axis Bank,Cash/cheque deposit
-20-01-2023,INB/NEFT/AXIC230207085142/Le traven/Flight ticket,569275.0,197662.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-01-2023,"NEFT/BDCBN23020353359/KALIPADA /THE WEST/ATTN/NE",50000.0,247662.3,credit,Axis Bank,Transfer-in/Revenue-other
-20-01-2023,IMPS/P2A/302017154865/DineshCh/ALLAHABA/payment,20000.0,267662.3,credit,Axis Bank,Transfer-in/Revenue-other
-21-01-2023,"NEFT/WBSCN23021228396/MANOJIT R/THE WEST/ATTN/BY",50000.0,317662.3,credit,Axis Bank,Transfer-in/Revenue-other
-21-01-2023,INB/NEFT/AXIC230217604725/Jajabor tou/Tour advanc,100000.0,217662.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-01-2023,NEFT/CBINI23023035904/B G FERTI/CENTRAL B///ATTN/,170000.0,387662.3,credit,Axis Bank,Transfer-in/Revenue-other
-23-01-2023,INB/IFT/Anup/TPARTY TRANSFER,50000.0,337662.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-01-2023,INB/NEFT/AXIC230238172652/Found/Incubation charge,2000.0,335662.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-01-2023,NEFT/IDIBH23024109789/Mr. MD SI/INDIAN BA/,120000.0,455662.3,credit,Axis Bank,Transfer-in/Revenue-other
-24-01-2023,SAK/CASH DEP/SAK328018942/1131/SELF,10000.0,465662.3,credit,Axis Bank,Cash/cheque deposit
-24-01-2023,NEFT/PUNBH23024438862/MAITY KRI/PUNJAB NA/,40000.0,505662.3,credit,Axis Bank,Transfer-in/Revenue-other
-24-01-2023,UPI/P2M/302458493288/MD ASHADU/Ujjivan S/Payment,50000.0,555662.3,credit,Axis Bank,Revenue-UPI
-24-01-2023,"BY CASH DEPOSIT-BNA/DPRH294901/5123/240123/BARDDHA",40000.0,595662.3,credit,Axis Bank,Cash/cheque deposit
-24-01-2023,"BY CASH DEPOSIT-BNA/DPRH294901/5125/240123/BARDDHA",10000.0,605662.3,credit,Axis Bank,Cash/cheque deposit
-25-01-2023,UPI/P2M/302563826494/ABDUL MAR/Punjab Na/Payment,4812.0,610474.3,credit,Axis Bank,Revenue-UPI
-25-01-2023,INB/NEFT/AXIC230258721878/Jajabor tou/Tour advanc,150000.0,460474.3,debit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,NEFT/BDCBN23025353634/KALIPADA /THE WEST /,50000.0,510474.3,credit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,NEFT/CBINH23025230837/Mr. MIRJA/CENTRAL B///URGE/,80000.0,590474.3,credit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,NEFT/PUNBH23025765059/MAITY KRI/PUNJAB NA/,50000.0,640474.3,credit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,UPI/P2A/302598817616/SK RAFICK/State Ban/Payment,50000.0,690474.3,credit,Axis Bank,Revenue-UPI
-27-01-2023,IMPS/P2A/302710344187/BIDYUTGH/UNIONBAN/Typeyour,99000.0,789474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,NEFT/PUNBH23027005611/IJAUL DEH/PUNJAB NA/,300000.0,1089474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,"NEFT/WBSCN23027229274/MANOJIT R/THE WEST/ATTN/BY",60000.0,1149474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,NEFT/PUNBH23027093059/MAITY KRI/PUNJAB NA/,30000.0,1179474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,INB/NEFT/AXIC230279526652/Surobhi Agro/Payment,175000.0,1004474.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-01-2023,UPI/P2A/302894065151/IJAUL DEH/Punjab Na/Payment,50000.0,1054474.3,credit,Axis Bank,Revenue-UPI
-28-01-2023,"NEFT/BDBLH23634248980/ANUPAM SAHA//2 -CUSTOMER/1",70000.0,1124474.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,UPI/P2A/300626923747/LAXMIKANT/Axis Bank/UPI,20000.0,151836.3,credit,Axis Bank,Revenue-UPI
-06-01-2023,"NEFT/SBIN423006438636/SISIR KUMARMONDAL//ATTN/TR",15000.0,166836.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-01-2023,INB/NEFT/AXIC230061678456/Ramesh Ad/Labour expens,19860.0,146976.3,debit,Axis Bank,Transfer-in/Revenue-other
-08-01-2023,UPI/P2M/300865178170/INJAMAMUL/Canara Ba/Payment,25000.0,171976.3,credit,Axis Bank,Revenue-UPI
-09-01-2023,NEFT/BDCBN23009352770/KALIPADA  BASU,50000.0,221976.3,credit,Axis Bank,Transfer-in/Revenue-other
-09-01-2023,"NEFT/UCBAH23009211007/MAITY KRISHIBHANDAR//FAST/",32000.0,253976.3,credit,Axis Bank,Transfer-in/Revenue-other
-10-01-2023,UPI/P2A/301074047399/SK ZAKIR /Axis Bank/Payment,40000.0,293976.3,credit,Axis Bank,Revenue-UPI
-10-01-2023,"NEFT/BDBLH23632750627/ANUPAM SAHA//2 -CUSTOMER/1",30000.0,323976.3,credit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,INB/IFT/TARAK/TPARTY TRANSFER,25000.0,298976.3,debit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,INB/NEFT/AXIC230113772521/Surobhi Agro/payment,30000.0,268976.3,debit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,INB/NEFT/AXIC230113771264/ALLIGO HORIZON P/paymen,30000.0,238976.3,debit,Axis Bank,Transfer-in/Revenue-other
-11-01-2023,SAK/CASH DEP/SAK326265527/1131/SELF,10000.0,248976.3,credit,Axis Bank,Cash/cheque deposit
-12-01-2023,INB/NEFT/AXIC230124293297/PROXICHEM/payment,1339.0,247637.3,debit,Axis Bank,Transfer-in/Revenue-other
-12-01-2023,INB/NEFT/AXIC230124392057/PRONAY JASH/expense,14947.0,232690.3,debit,Axis Bank,Transfer-in/Revenue-other
-12-01-2023,INB/NEFT/AXIC230124415665/Reckon Advertisi/paymen,12000.0,220690.3,debit,Axis Bank,Transfer-in/Revenue-other
-13-01-2023,"NEFT/WBSCN23013226162/MANOJIT ROY/ATTN/MANOJITRO",40000.0,260690.3,credit,Axis Bank,Transfer-in/Revenue-other
-13-01-2023,NEFT/PUNBH23013614109/PRODYUT KUMAR SARKAR,50000.0,310690.3,credit,Axis Bank,Transfer-in/Revenue-other
-13-01-2023,INB/NEFT/AXIC230134997955/ANIMESH MONDAL/Expense,10000.0,300690.3,debit,Axis Bank,Transfer-in/Revenue-other
-14-01-2023,UPI/P2M/301464643143/BAPI KUND/IDBI Bank/Payment,15000.0,315690.3,credit,Axis Bank,Revenue-UPI
-14-01-2023,INB/NEFT/AXIC230145267645/PRONAY JA/Expense banne,1500.0,314190.3,debit,Axis Bank,Transfer-in/Revenue-other
-14-01-2023,UPI/P2A/301486680762/LAXMIKANT/Axis Bank/UPI,45000.0,359190.3,credit,Axis Bank,Revenue-UPI
-14-01-2023,GST @18% on Charge,27.0,359163.3,debit,Axis Bank,Tax/other-credit
-14-01-2023,Consolidated Charges for A/c,150.0,359013.3,debit,Axis Bank,Transfer-in/Revenue-other
-16-01-2023,IMPS/P2A/301642949277/SUSHILGH/UCOBANK/SurobhiA,50000.0,409013.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-01-2023,NEFT/PUNBH23016188901/ALOKE KUM/PUNJAB NA/,100000.0,509013.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-01-2023,INB/NEFT/AXIC230165825537/Surobhi Agro/Payment,30000.0,479013.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-01-2023,INB/NEFT/AXIC230175867932/PRONAY JASH/Expense,4500.0,474513.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-01-2023,By Clg 000026 028  Arambagh,18888.0,493401.3,credit,Axis Bank,Cash/cheque deposit
-17-01-2023,IMPS/P2A/301743511322/SUSHILGH/UCOBANK/SurobhiA,50000.0,543401.3,credit,Axis Bank,Transfer-in/Revenue-other
-18-01-2023,SAK/CASH DEP/SAK327127796/1131/SELF,13000.0,556401.3,credit,Axis Bank,Cash/cheque deposit
-18-01-2023,"NEFT/SBIN123018424084/RAMESWAR /STATEBAN//ATTN/B",200000.0,756401.3,credit,Axis Bank,Transfer-in/Revenue-other
-18-01-2023,INB/NEFT/AXIC230186501677/PRONAY/Transport Expens,7600.0,748801.3,debit,Axis Bank,Transfer-in/Revenue-other
-18-01-2023,INB/714957500/GST TAX PAYMENT/,21864.0,726937.3,debit,Axis Bank,Tax/other-credit
-19-01-2023,INB/NEFT/AXIC230196609070/Surobhi Agro/Payment,60000.0,666937.3,debit,Axis Bank,Transfer-in/Revenue-other
-19-01-2023,By Clg 451850 024  Arambagh,50000.0,716937.3,credit,Axis Bank,Cash/cheque deposit
-19-01-2023,"BY CASH DEPOSIT-BNA/DPRH294901/4926/190123/BARDDHA",50000.0,766937.3,credit,Axis Bank,Cash/cheque deposit
-20-01-2023,INB/NEFT/AXIC230207085142/Le traven/Flight ticket,569275.0,197662.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-01-2023,"NEFT/BDCBN23020353359/KALIPADA /THE WEST/ATTN/NE",50000.0,247662.3,credit,Axis Bank,Transfer-in/Revenue-other
-20-01-2023,IMPS/P2A/302017154865/DineshCh/ALLAHABA/payment,20000.0,267662.3,credit,Axis Bank,Transfer-in/Revenue-other
-21-01-2023,"NEFT/WBSCN23021228396/MANOJIT R/THE WEST/ATTN/BY",50000.0,317662.3,credit,Axis Bank,Transfer-in/Revenue-other
-21-01-2023,INB/NEFT/AXIC230217604725/Jajabor tou/Tour advanc,100000.0,217662.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-01-2023,NEFT/CBINI23023035904/B G FERTI/CENTRAL B///ATTN/,170000.0,387662.3,credit,Axis Bank,Transfer-in/Revenue-other
-23-01-2023,INB/IFT/Anup/TPARTY TRANSFER,50000.0,337662.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-01-2023,INB/NEFT/AXIC230238172652/Found/Incubation charge,2000.0,335662.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-01-2023,NEFT/IDIBH23024109789/Mr. MD SI/INDIAN BA/,120000.0,455662.3,credit,Axis Bank,Transfer-in/Revenue-other
-24-01-2023,SAK/CASH DEP/SAK328018942/1131/SELF,10000.0,465662.3,credit,Axis Bank,Cash/cheque deposit
-24-01-2023,NEFT/PUNBH23024438862/MAITY KRI/PUNJAB NA/,40000.0,505662.3,credit,Axis Bank,Transfer-in/Revenue-other
-24-01-2023,UPI/P2M/302458493288/MD ASHADU/Ujjivan S/Payment,50000.0,555662.3,credit,Axis Bank,Revenue-UPI
-24-01-2023,"BY CASH DEPOSIT-BNA/DPRH294901/5123/240123/BARDDHA",40000.0,595662.3,credit,Axis Bank,Cash/cheque deposit
-24-01-2023,"BY CASH DEPOSIT-BNA/DPRH294901/5125/240123/BARDDHA",10000.0,605662.3,credit,Axis Bank,Cash/cheque deposit
-25-01-2023,UPI/P2M/302563826494/ABDUL MAR/Punjab Na/Payment,4812.0,610474.3,credit,Axis Bank,Revenue-UPI
-25-01-2023,INB/NEFT/AXIC230258721878/Jajabor tou/Tour advanc,150000.0,460474.3,debit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,NEFT/BDCBN23025353634/KALIPADA /THE WEST /,50000.0,510474.3,credit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,NEFT/CBINH23025230837/Mr. MIRJA/CENTRAL B///URGE/,80000.0,590474.3,credit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,NEFT/PUNBH23025765059/MAITY KRI/PUNJAB NA/,50000.0,640474.3,credit,Axis Bank,Transfer-in/Revenue-other
-25-01-2023,UPI/P2A/302598817616/SK RAFICK/State Ban/Payment,50000.0,690474.3,credit,Axis Bank,Revenue-UPI
-27-01-2023,IMPS/P2A/302710344187/BIDYUTGH/UNIONBAN/Typeyour,99000.0,789474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,NEFT/PUNBH23027005611/IJAUL DEH/PUNJAB NA/,300000.0,1089474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,"NEFT/WBSCN23027229274/MANOJIT R/THE WEST/ATTN/BY",60000.0,1149474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,NEFT/PUNBH23027093059/MAITY KRI/PUNJAB NA/,30000.0,1179474.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-01-2023,INB/NEFT/AXIC230279526652/Surobhi Agro/Payment,175000.0,1004474.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-01-2023,UPI/P2A/302894065151/IJAUL DEH/Punjab Na/Payment,50000.0,1054474.3,credit,Axis Bank,Revenue-UPI
-28-01-2023,"NEFT/BDBLH23634248980/ANUPAM SAHA//2 -CUSTOMER/1",70000.0,1124474.3,credit,Axis Bank,Transfer-in/Revenue-other
-29-01-2023,UPI/P2A/302948490499/LAXMIKANT/Axis Bank/UPI,30000.0,1154474.3,credit,Axis Bank,Revenue-UPI
-29-01-2023,UPI/P2M/302982490310/MD ASHADU/Ujjivan S/Payment,50000.0,1204474.3,credit,Axis Bank,Revenue-UPI
-29-01-2023,INB/IFT/TARAK/TPARTY TRANSFER,15000.0,1189474.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/PUNBH23030403135/PRODYUT KUMAR SARKAR/,10000.0,1199474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,SAK/CASH DEP/SAK328632510/1131/SELF,10000.0,1209474.3,credit,Axis Bank,Cash/cheque deposit
-30-01-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,1199474.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,1179474.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,"NEFT/SBIN423030989089/RAMESHWARDAS//ATTN/PAYMENT",200000.0,1379474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/PUNBH23030653134/MAITY KRISHI BHANDER/,50000.0,1429474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/BDBLH23634394689/KISHAN BIKASH ENTERPRISE//2,43000.0,1472474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/PUNBH23030722369/MD ATIAR MOLLA//NEFT/,20000.0,1492474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/CBINI23030495076/B G FERTILIZER///ATTN/BGFer,170000.0,1662474.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,By Clg 098706 026  Jalpaiguri,100000.0,1762474.3,credit,Axis Bank,Cash/cheque deposit
-31-01-2023,INB/NEFT/AXIC230310448802/Jajabor tou/Tour paymen,100000.0,1662474.3,debit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,UPI/P2A/303158174230/SK RAFICK/State Ban/Payment,42000.0,1704474.3,credit,Axis Bank,Revenue-UPI
-31-01-2023,UPI/P2A/303117421394/IJAUL DEH/Punjab Na/Payment,50000.0,1754474.3,credit,Axis Bank,Revenue-UPI
-31-01-2023,"NEFT/SBIN123031345455/SISIR KUMARMONDAL//ATTN/OT",10000.0,1764474.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,INB/716935882/RELIANCE JIO INFOCOMM LTD(BILLDESK),5900.0,1758574.3,debit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,INB/NEFT/AXIC230310494981/Krishna Ganguly/transfe,50000.0,1708574.3,debit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,NEFT/BDBLH23634497051/DEGANGA BEEJ BHANDAR//24 -,20000.0,1728574.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,NEFT/IDIBH23031345885/NAOSAD MONDAL/,10000.0,1738574.3,credit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,"INB/NEFT/AXIC230342580385/KASA DEVELOPMENTPV/Ren",24800.0,1713774.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,INB/NEFT/AXIC230342580696/Swapnil Modi/Factory,20000.0,1693774.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,INB/NEFT/AXIC230342580898//Transport and packing,25000.0,1668774.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,INB/NEFT/AXIC230342580524/Swapnil Modi/Factory,25000.0,1643774.3,debit,Axis Bank,Transfer-in/Revenue-other
-04-02-2023,IMPS/P2A/303509859846/SELIMBIS/PUNJABNA/Selimbis,10000.0,1653774.3,credit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,44850.0,1608924.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274459/PRONAY JASH/salary,17890.0,1591034.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274521/ANIMESH MONDAL/salary,24870.0,1566164.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274505/PINTU MONDAL/salary,24870.0,1541294.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/IFT/AMRITA/TPARTY TRANSFER,14890.0,1526404.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274488/Ananya Maiti/salary,10390.0,1516014.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274526/MANAJIT MAJI/salary,13390.0,1502624.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274538/Rajesh Ghosh/salary,10390.0,1492234.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274563/KALYAN MUKHERJEE/salary,12890.0,1479344.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274604/Gautam Jana/salary,11890.0,1467454.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274633/Kazi Mohibul/Salary,9500.0,1457954.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274698/Malay Sen/Salary,8000.0,1449954.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274726/Manirul Islam/Salary,7000.0,1442954.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274645/Nirmal Bag/Salary,6500.0,1436454.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,12000.0,1424454.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373345263/PRONAY J/Packing expens,15000.0,1409454.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373346184/Anup Ganguly/Salary,49800.0,1359654.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373352961/Surobhi Agro/payment,500000.0,859654.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373367646/taraknat/Glow sign boar,24000.0,835654.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373442260/PRONAY JASH/Office Rent,11600.0,824054.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373525929/Kushal Bhattachar/Salar,9500.0,814554.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230383995562/Ramesh Ad/Labour expens,18542.0,796012.3,debit,Axis Bank,Transfer-in/Revenue-other
-29-01-2023,UPI/P2A/302948490499/LAXMIKANT/Axis Bank/UPI,30000.0,1154474.3,credit,Axis Bank,Revenue-UPI
-29-01-2023,UPI/P2M/302982490310/MD ASHADU/Ujjivan S/Payment,50000.0,1204474.3,credit,Axis Bank,Revenue-UPI
-29-01-2023,INB/IFT/TARAK/TPARTY TRANSFER,15000.0,1189474.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/PUNBH23030403135/PRODYUT KUMAR SARKAR/,10000.0,1199474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,SAK/CASH DEP/SAK328632510/1131/SELF,10000.0,1209474.3,credit,Axis Bank,Cash/cheque deposit
-30-01-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,1199474.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,1179474.3,debit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,"NEFT/SBIN423030989089/RAMESHWARDAS//ATTN/PAYMENT",200000.0,1379474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/PUNBH23030653134/MAITY KRISHI BHANDER/,50000.0,1429474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/BDBLH23634394689/KISHAN BIKASH ENTERPRISE//2,43000.0,1472474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/PUNBH23030722369/MD ATIAR MOLLA//NEFT/,20000.0,1492474.3,credit,Axis Bank,Transfer-in/Revenue-other
-30-01-2023,NEFT/CBINI23030495076/B G FERTILIZER///ATTN/BGFer,170000.0,1662474.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,By Clg 098706 026  Jalpaiguri,100000.0,1762474.3,credit,Axis Bank,Cash/cheque deposit
-31-01-2023,INB/NEFT/AXIC230310448802/Jajabor tou/Tour paymen,100000.0,1662474.3,debit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,UPI/P2A/303158174230/SK RAFICK/State Ban/Payment,42000.0,1704474.3,credit,Axis Bank,Revenue-UPI
-31-01-2023,UPI/P2A/303117421394/IJAUL DEH/Punjab Na/Payment,50000.0,1754474.3,credit,Axis Bank,Revenue-UPI
-31-01-2023,"NEFT/SBIN123031345455/SISIR KUMARMONDAL//ATTN/OT",10000.0,1764474.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,INB/716935882/RELIANCE JIO INFOCOMM LTD(BILLDESK),5900.0,1758574.3,debit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,INB/NEFT/AXIC230310494981/Krishna Ganguly/transfe,50000.0,1708574.3,debit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,NEFT/BDBLH23634497051/DEGANGA BEEJ BHANDAR//24 -,20000.0,1728574.3,credit,Axis Bank,Transfer-in/Revenue-other
-31-01-2023,NEFT/IDIBH23031345885/NAOSAD MONDAL/,10000.0,1738574.3,credit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,"INB/NEFT/AXIC230342580385/KASA DEVELOPMENTPV/Ren",24800.0,1713774.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,INB/NEFT/AXIC230342580696/Swapnil Modi/Factory,20000.0,1693774.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,INB/NEFT/AXIC230342580898//Transport and packing,25000.0,1668774.3,debit,Axis Bank,Transfer-in/Revenue-other
-03-02-2023,INB/NEFT/AXIC230342580524/Swapnil Modi/Factory,25000.0,1643774.3,debit,Axis Bank,Transfer-in/Revenue-other
-04-02-2023,IMPS/P2A/303509859846/SELIMBIS/PUNJABNA/Selimbis,10000.0,1653774.3,credit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,44850.0,1608924.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274459/PRONAY JASH/salary,17890.0,1591034.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274521/ANIMESH MONDAL/salary,24870.0,1566164.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274505/PINTU MONDAL/salary,24870.0,1541294.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/IFT/AMRITA/TPARTY TRANSFER,14890.0,1526404.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274488/Ananya Maiti/salary,10390.0,1516014.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274526/MANAJIT MAJI/salary,13390.0,1502624.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274538/Rajesh Ghosh/salary,10390.0,1492234.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274563/KALYAN MUKHERJEE/salary,12890.0,1479344.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274604/Gautam Jana/salary,11890.0,1467454.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274633/Kazi Mohibul/Salary,9500.0,1457954.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274698/Malay Sen/Salary,8000.0,1449954.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274726/Manirul Islam/Salary,7000.0,1442954.3,debit,Axis Bank,Transfer-in/Revenue-other
-05-02-2023,INB/NEFT/AXIC230363274645/Nirmal Bag/Salary,6500.0,1436454.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,12000.0,1424454.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373345263/PRONAY J/Packing expens,15000.0,1409454.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373346184/Anup Ganguly/Salary,49800.0,1359654.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373352961/Surobhi Agro/payment,500000.0,859654.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373367646/taraknat/Glow sign boar,24000.0,835654.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373442260/PRONAY JASH/Office Rent,11600.0,824054.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-02-2023,INB/NEFT/AXIC230373525929/Kushal Bhattachar/Salar,9500.0,814554.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230383995562/Ramesh Ad/Labour expens,18542.0,796012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,By Clg 439291 002  Jalpaiguri,10000.0,806012.3,credit,Axis Bank,Cash/cheque deposit
-07-02-2023,INB/IFT/Anup/TPARTY TRANSFER,30000.0,776012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230384197246/PRONAY JA/Office expens,16000.0,760012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230384468881/Surobhi Agro/Payment,300000.0,460012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230384469421/ALLIGO HORIZON P/Paymen,25000.0,435012.3,debit,Axis Bank,Transfer-in/Revenue-other
-08-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,425012.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-02-2023,INB/NEFT/AXIC230405222644/PRONAY JASH/expense,10000.0,415012.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-02-2023,INB/NEFT/AXIC230405526705/Surobhi Agro/Payment,100000.0,315012.3,debit,Axis Bank,Transfer-in/Revenue-other
-10-02-2023,NEFT/BDBLH23635498468/KISHAN BIKASH ENTERPRISE//2,25000.0,340012.3,credit,Axis Bank,Transfer-in/Revenue-other
-11-02-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,320012.3,debit,Axis Bank,Transfer-in/Revenue-other
-13-02-2023,"NEFT/PUNBH23044247070/ALOKE KUMAR SAHA ANDBROS/",125000.0,445012.3,credit,Axis Bank,Transfer-in/Revenue-other
-14-02-2023,INB/NEFT/AXIC230457117590/Surobhi Agro/Payment,140000.0,305012.3,debit,Axis Bank,Transfer-in/Revenue-other
-14-02-2023,INB/NEFT/AXIC230457128728//Glow sign board paymen,8400.0,296612.3,debit,Axis Bank,Loan-in
-14-02-2023,By Clg 098710 026  Jalpaiguri,100000.0,396612.3,credit,Axis Bank,Cash/cheque deposit
-15-02-2023,INB/NEFT/AXIC230467541402/Surobhi Agro/Payment,100000.0,296612.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-02-2023,INB/NEFT/AXIC230467562599/ANIMESH MONDAL/Expenses,8000.0,288612.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-02-2023,SAK/CASH DEP/SAK331216835/1131/SELF,10000.0,298612.3,credit,Axis Bank,Cash/cheque deposit
-15-02-2023,"NEFT/SBIN323046752180/MS PRAFULLA KRISHIBHANDER/",20000.0,318612.3,credit,Axis Bank,Transfer-in/Revenue-other
-15-02-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,298612.3,debit,Axis Bank,Transfer-in/Revenue-other
-16-02-2023,INB/NEFT/AXIC230478379059/Jyotirmay Bhunia/Salary,10000.0,288612.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/NEFT/AXIC230488449579/Surobhi Agro/Payment,30000.0,258612.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/NEFT/AXIC230488533893/Jajabor tours tr/paymen,21600.0,237012.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,20000.0,217012.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/NEFT/AXIC230488629883/Subrata Ganguly/Expense,15000.0,202012.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,GST @18% on Charge,36.0,201976.3,debit,Axis Bank,Tax/other-credit
-17-02-2023,Consolidated Charges for A/c,200.0,201776.3,debit,Axis Bank,Transfer-in/Revenue-other
-18-02-2023,By Clg 360632 002  Burdwan,10000.0,211776.3,credit,Axis Bank,Cash/cheque deposit
-20-02-2023,INB/715272641/GST TAX PAYMENT/gst,14630.0,197146.3,debit,Axis Bank,Tax/other-credit
-20-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,15000.0,182146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,INB/NEFT/AXIC230519224381/Starters CFO pvt/Paymen,15000.0,167146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,157146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,INB/NEFT/AXIC230519265837/Subrata Ganguly/Expense,15000.0,142146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,UPI/P2M/305123978863/Mr KAZI M/Bandhan B/Payment,21748.0,163894.3,credit,Axis Bank,Revenue-UPI
-21-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,153894.3,debit,Axis Bank,Transfer-in/Revenue-other
-21-02-2023,INB/NEFT/AXIC230529649875/PRONAY/Transport expens,13000.0,140894.3,debit,Axis Bank,Transfer-in/Revenue-other
-21-02-2023,By Clg 451856 024  Arambagh,28000.0,168894.3,credit,Axis Bank,Cash/cheque deposit
-21-02-2023,SAK/CASH DEP/SAK332048326/1131/SELF,20000.0,188894.3,credit,Axis Bank,Cash/cheque deposit
-22-02-2023,INB/NEFT/AXIC230530059937//Tshirt and office expe,20000.0,168894.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-02-2023,"NEFT/PUNBH23053785492/ALOKE KUMAR SAHA ANDBROS/",128350.0,297244.3,credit,Axis Bank,Transfer-in/Revenue-other
-22-02-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,277244.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-02-2023,INB/NEFT/AXIC230530391514/Surobhi Agro/Transport,60000.0,217244.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-02-2023,NEFT/IC/AXIC230540456110/SUROBHI AGRO IN/marketin,5000.0,212244.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-02-2023,"BY CASH DEPOSIT-BNA/DPRH294901/8001/240223/BARDDHA",40000.0,252244.3,credit,Axis Bank,Cash/cheque deposit
-26-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,242244.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-02-2023,INB/NEFT/AXIC230571409471/Surobhi Agro/Payment,72000.0,170244.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,10000.0,160244.3,debit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,By Clg 446701 024  Rampurhat,15000.0,175244.3,credit,Axis Bank,Cash/cheque deposit
-27-02-2023,"BY CASH DEPOSIT-BNA/CWRO14804/6280/270223/BURDWAN",10000.0,185244.3,credit,Axis Bank,Cash/cheque deposit
-27-02-2023,NEFT/IDIBH23058289547/Mr. MD SIRAJUL HAQUE/,40000.0,225244.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,INB/NEFT/AXIC230581673635/Abu mo/Center commissio,4400.0,220844.3,debit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,INB/NEFT/AXIC230581674589/PRONAY JA/Ecodap packin,17200.0,203644.3,debit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,UPI/P2A/305881230992/SK RAFICK/State Ban/Payment,20000.0,223644.3,credit,Axis Bank,Revenue-UPI
-27-02-2023,INB/NEFT/AXIC230581838537/Surobhi Agro/Payment,50000.0,173644.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-02-2023,By Clg 291676 002  Burdwan,10000.0,183644.3,credit,Axis Bank,Cash/cheque deposit
-28-02-2023,UPI/P2M/305932089044/INJAMAMUL/Canara Ba/Payment,30000.0,213644.3,credit,Axis Bank,Revenue-UPI
-01-03-2023,IMPS/P2A/305923030217/DEGANGAB/BandhanB/remark,30000.0,243644.3,credit,Axis Bank,Transfer-in/Revenue-other
-01-03-2023,INB/NEFT/AXIC230602619911/Anup Ganguly/Salary,49800.0,193844.3,debit,Axis Bank,Transfer-in/Revenue-other
-01-03-2023,UPI/P2M/306075257469/Mr MD SOH/Central B/PAY BY,1200.0,195044.3,credit,Axis Bank,Revenue-UPI
-01-03-2023,NEFT/IDIBH23060292469/Mr. NAOSAD MONDAL/,11000.0,206044.3,credit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613350420/PRONAY JASH/Expense,15000.0,191044.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613352600/Nirmal Bag/Salary,6500.0,184544.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613352240/Kazi Mohibul/Salary,9500.0,175044.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613352974/Manirul Islam/Salary,7000.0,168044.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613508616/Md S/Soil test incentiv,400.0,167644.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613508905/PINT/Soil test incentiv,200.0,167444.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613509567/Malay Sen/Salary,8000.0,159444.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,"NEFT/HSBCN23061864435/SUROBHI AGRO INDUSTRIESPRI",80000.0,239444.3,credit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,By Clg 439291 002  Jalpaiguri,10000.0,806012.3,credit,Axis Bank,Cash/cheque deposit
-07-02-2023,INB/IFT/Anup/TPARTY TRANSFER,30000.0,776012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230384197246/PRONAY JA/Office expens,16000.0,760012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230384468881/Surobhi Agro/Payment,300000.0,460012.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-02-2023,INB/NEFT/AXIC230384469421/ALLIGO HORIZON P/Paymen,25000.0,435012.3,debit,Axis Bank,Transfer-in/Revenue-other
-08-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,425012.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-02-2023,INB/NEFT/AXIC230405222644/PRONAY JASH/expense,10000.0,415012.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-02-2023,INB/NEFT/AXIC230405526705/Surobhi Agro/Payment,100000.0,315012.3,debit,Axis Bank,Transfer-in/Revenue-other
-10-02-2023,NEFT/BDBLH23635498468/KISHAN BIKASH ENTERPRISE//2,25000.0,340012.3,credit,Axis Bank,Transfer-in/Revenue-other
-11-02-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,320012.3,debit,Axis Bank,Transfer-in/Revenue-other
-13-02-2023,"NEFT/PUNBH23044247070/ALOKE KUMAR SAHA ANDBROS/",125000.0,445012.3,credit,Axis Bank,Transfer-in/Revenue-other
-14-02-2023,INB/NEFT/AXIC230457117590/Surobhi Agro/Payment,140000.0,305012.3,debit,Axis Bank,Transfer-in/Revenue-other
-14-02-2023,INB/NEFT/AXIC230457128728//Glow sign board paymen,8400.0,296612.3,debit,Axis Bank,Loan-in
-14-02-2023,By Clg 098710 026  Jalpaiguri,100000.0,396612.3,credit,Axis Bank,Cash/cheque deposit
-15-02-2023,INB/NEFT/AXIC230467541402/Surobhi Agro/Payment,100000.0,296612.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-02-2023,INB/NEFT/AXIC230467562599/ANIMESH MONDAL/Expenses,8000.0,288612.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-02-2023,SAK/CASH DEP/SAK331216835/1131/SELF,10000.0,298612.3,credit,Axis Bank,Cash/cheque deposit
-15-02-2023,"NEFT/SBIN323046752180/MS PRAFULLA KRISHIBHANDER/",20000.0,318612.3,credit,Axis Bank,Transfer-in/Revenue-other
-15-02-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,298612.3,debit,Axis Bank,Transfer-in/Revenue-other
-16-02-2023,INB/NEFT/AXIC230478379059/Jyotirmay Bhunia/Salary,10000.0,288612.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/NEFT/AXIC230488449579/Surobhi Agro/Payment,30000.0,258612.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/NEFT/AXIC230488533893/Jajabor tours tr/paymen,21600.0,237012.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,20000.0,217012.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,INB/NEFT/AXIC230488629883/Subrata Ganguly/Expense,15000.0,202012.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-02-2023,GST @18% on Charge,36.0,201976.3,debit,Axis Bank,Tax/other-credit
-17-02-2023,Consolidated Charges for A/c,200.0,201776.3,debit,Axis Bank,Transfer-in/Revenue-other
-18-02-2023,By Clg 360632 002  Burdwan,10000.0,211776.3,credit,Axis Bank,Cash/cheque deposit
-20-02-2023,INB/715272641/GST TAX PAYMENT/gst,14630.0,197146.3,debit,Axis Bank,Tax/other-credit
-20-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,15000.0,182146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,INB/NEFT/AXIC230519224381/Starters CFO pvt/Paymen,15000.0,167146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,157146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,INB/NEFT/AXIC230519265837/Subrata Ganguly/Expense,15000.0,142146.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-02-2023,UPI/P2M/305123978863/Mr KAZI M/Bandhan B/Payment,21748.0,163894.3,credit,Axis Bank,Revenue-UPI
-21-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,153894.3,debit,Axis Bank,Transfer-in/Revenue-other
-21-02-2023,INB/NEFT/AXIC230529649875/PRONAY/Transport expens,13000.0,140894.3,debit,Axis Bank,Transfer-in/Revenue-other
-21-02-2023,By Clg 451856 024  Arambagh,28000.0,168894.3,credit,Axis Bank,Cash/cheque deposit
-21-02-2023,SAK/CASH DEP/SAK332048326/1131/SELF,20000.0,188894.3,credit,Axis Bank,Cash/cheque deposit
-22-02-2023,INB/NEFT/AXIC230530059937//Tshirt and office expe,20000.0,168894.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-02-2023,"NEFT/PUNBH23053785492/ALOKE KUMAR SAHA ANDBROS/",128350.0,297244.3,credit,Axis Bank,Transfer-in/Revenue-other
-22-02-2023,INB/IFT/Anup/TPARTY TRANSFER,20000.0,277244.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-02-2023,INB/NEFT/AXIC230530391514/Surobhi Agro/Transport,60000.0,217244.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-02-2023,NEFT/IC/AXIC230540456110/SUROBHI AGRO IN/marketin,5000.0,212244.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-02-2023,"BY CASH DEPOSIT-BNA/DPRH294901/8001/240223/BARDDHA",40000.0,252244.3,credit,Axis Bank,Cash/cheque deposit
-26-02-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,242244.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-02-2023,INB/NEFT/AXIC230571409471/Surobhi Agro/Payment,72000.0,170244.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-02-2023,INB/IFT/TARAK/TPARTY TRANSFER,10000.0,160244.3,debit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,By Clg 446701 024  Rampurhat,15000.0,175244.3,credit,Axis Bank,Cash/cheque deposit
-27-02-2023,"BY CASH DEPOSIT-BNA/CWRO14804/6280/270223/BURDWAN",10000.0,185244.3,credit,Axis Bank,Cash/cheque deposit
-27-02-2023,NEFT/IDIBH23058289547/Mr. MD SIRAJUL HAQUE/,40000.0,225244.3,credit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,INB/NEFT/AXIC230581673635/Abu mo/Center commissio,4400.0,220844.3,debit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,INB/NEFT/AXIC230581674589/PRONAY JA/Ecodap packin,17200.0,203644.3,debit,Axis Bank,Transfer-in/Revenue-other
-27-02-2023,UPI/P2A/305881230992/SK RAFICK/State Ban/Payment,20000.0,223644.3,credit,Axis Bank,Revenue-UPI
-27-02-2023,INB/NEFT/AXIC230581838537/Surobhi Agro/Payment,50000.0,173644.3,debit,Axis Bank,Transfer-in/Revenue-other
-28-02-2023,By Clg 291676 002  Burdwan,10000.0,183644.3,credit,Axis Bank,Cash/cheque deposit
-28-02-2023,UPI/P2M/305932089044/INJAMAMUL/Canara Ba/Payment,30000.0,213644.3,credit,Axis Bank,Revenue-UPI
-01-03-2023,IMPS/P2A/305923030217/DEGANGAB/BandhanB/remark,30000.0,243644.3,credit,Axis Bank,Transfer-in/Revenue-other
-01-03-2023,INB/NEFT/AXIC230602619911/Anup Ganguly/Salary,49800.0,193844.3,debit,Axis Bank,Transfer-in/Revenue-other
-01-03-2023,UPI/P2M/306075257469/Mr MD SOH/Central B/PAY BY,1200.0,195044.3,credit,Axis Bank,Revenue-UPI
-01-03-2023,NEFT/IDIBH23060292469/Mr. NAOSAD MONDAL/,11000.0,206044.3,credit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613350420/PRONAY JASH/Expense,15000.0,191044.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613352600/Nirmal Bag/Salary,6500.0,184544.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613352240/Kazi Mohibul/Salary,9500.0,175044.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613352974/Manirul Islam/Salary,7000.0,168044.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613508616/Md S/Soil test incentiv,400.0,167644.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613508905/PINT/Soil test incentiv,200.0,167444.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,INB/NEFT/AXIC230613509567/Malay Sen/Salary,8000.0,159444.3,debit,Axis Bank,Transfer-in/Revenue-other
-02-03-2023,"NEFT/HSBCN23061864435/SUROBHI AGRO INDUSTRIESPRI",80000.0,239444.3,credit,Axis Bank,Transfer-in/Revenue-other
-04-03-2023,IMPS/P2A/306320861502/SELIMBIS/PUNJABNA/IMPS,10000.00,249444.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/IFT/TARAK/TPARTY TRANSFER,44850.00,204594.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655623398/Rajesh Ghosh/salary,10390.00,194204.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655621485/PRONAY JASH/salary,17890.00,176314.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655623829/Ananya Maiti/salary,10390.00,165924.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/IFT/AMRITA/TPARTY TRANSFER,14890.00,151034.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655626145/ANIMESH MONDAL/salary,24870.00,126164.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655626694/KALYAN MUKHERJEE/salary,12890.00,113274.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655624330/MANAJIT MAJI/salary,13390.00,99884.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655629995/Kushal Bhattachar/salar,9500.00,90384.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,"NEFT/HSBCN23065382969/SUROBHI AGRO INDUSTRIESPRI",50000.00,140384.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655793570/KASA DEVELOPMENT PV/ren,24800.00,115584.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-03-2023,INB/NEFT/AXIC230666067361/Swapnil Mod/factory ren,25000.00,90584.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-03-2023,INB/NEFT/AXIC230666066111/Gautam Jana/salary,11890.00,78694.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-03-2023,INB/NEFT/AXIC230686857128/PINTU MONDAL/Salary,24870.00,53824.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-03-2023,INB/NEFT/AXIC230686973065/Palash De/payment,15000.00,38824.3,debit,Axis Bank,Transfer-in/Revenue-other
-10-03-2023,INB/IFT/TARAK/TPARTY TRANSFER,12000.00,26824.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-03-2023,INB/NEFT/AXIC230749660383/Jyotirmay Bhunia/Salary,10000.00,16824.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-03-2023,"NEFT/HSBCN23074202851/SUROBHI AGRO INDUSTRIESPRI",10000.00,26824.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-03-2023,NEFT/CBINI23075315368/B G FERTILIZER///ATTN/BG Fe,50000.00,76824.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-03-2023,INB/NEFT/AXIC230759815029/ANIMESH MONDAL/expense,8000.00,68824.3,debit,Axis Bank,Transfer-in/Revenue-other
-16-03-2023,NEFT/IDIBH23075366684/M s. AZIZ KRISHI CENTRE/,15000.00,83824.3,credit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,NEFT/IDIBH23076421479/Mr. MD SIRAJUL HAQUE/,40000.00,123824.3,credit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,INB/NEFT/AXIC230760219761/PRONAY JASH/Expense,10000.00,113824.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,INB/IFT/Anup/TPARTY TRANSFER,3000.00,110824.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,INB/NEFT/AXIC230760476685/ALLIGO HORIZON P/paymen,25000.00,85824.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,GST @18% on Charge,18.00,85806.3,debit,Axis Bank,Tax/other-credit
-17-03-2023,Consolidated Charges for A/c,100.00,85706.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-03-2023,INB/715601876/GST TAX PAYMENT/,9551.00,76155.3,debit,Axis Bank,Tax/other-credit
-20-03-2023,INB/NEFT/AXIC230791054264/Starters CFO pvt/CA fee,5900.00,70255.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-03-2023,UPI/P2A/307994068763/JYOTIRMOY/Bandhan B/Payment,24000.00,94255.3,credit,Axis Bank,Revenue-UPI
-21-03-2023,SAK/CASH DEP/SAK336319322/232/BY CASH,220000.00,314255.3,credit,Axis Bank,Cash/cheque deposit
-22-03-2023,INB/NEFT/AXIC230811885149/Swapnil Modi/Rent,10000.00,304255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230811885243/ALLIGO HORIZON P/Paymen,30000.00,274255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230811885493/Surobhi Agro/Payment,30000.00,244255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230811958368/PRONAY JASH/Expense,14000.00,230255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230812076748/Ad CONCEPT/Payment,20000.00,210255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,NEFT/BDBLH23639204783/KISHAN BIKASH ENTERPRISE//2,40000.00,250255.3,credit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/IFT/Anup/TPARTY TRANSFER,5000.00,245255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230812133758/Subrata Ganguly/Expense,20000.00,225255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230812133428/taraknath /Van promotio,15000.00,210255.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-03-2023,UPI/P2A/308202595266/JYOTIRMOY/Bandhan B/Payment,7000.00,217255.3,credit,Axis Bank,Revenue-UPI
-23-03-2023,INB/NEFT/AXIC230822371800/Aditya Bioinnova/Paymen,25000.00,192255.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-03-2023,UPI/P2M/308278507658/INJAMAMUL/Canara Ba/Payment,30000.00,222255.3,credit,Axis Bank,Revenue-UPI
-23-03-2023,INB/NEFT/AXIC230822597489/SUROBHI AGRO I/Promotio,3000.00,219255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/IFT/Anup/TPARTY TRANSFER,3000.00,216255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/IFT/TARAK/TPARTY TRANSFER,15000.00,201255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/NEFT/AXIC230832722018/Gautam Jana/advance,1000.00,200255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,UPI/P2A/308339061731/JYOTIRMOY/Bandhan B/Payment,10000.00,210255.3,credit,Axis Bank,Revenue-UPI
-24-03-2023,NEFT/WBSCN23083247263/MANOJIT ROY/ATTN/BY NEFT,40000.00,250255.3,credit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/NEFT/AXIC230833024078/Jyotirmay Bhunia/Expens,5000.00,245255.3,debit,Axis Bank,Transfer-in/Revenue-other
-25-03-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.00,235255.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-03-2023,UPI/P2M/308533937648/MD ABDUL /State Ban/Payment,1.00,235256.3,credit,Axis Bank,Revenue-UPI
-26-03-2023,INB/NEFT/AXIC230853311954/ALLIGO HORIZON P/Paymen,25000.00,210256.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-03-2023,INB/NEFT/AXIC230853311994/Surobhi Agro/Payment,25000.00,185256.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-03-2023,UPI/P2M/345113479979/AMRIT HAZ/Axis Bank/Oid2023,1.00,185257.3,credit,Axis Bank,Revenue-UPI
-Sr. No.,Recover Date,Total(RS).,0.0,,Axis Bank,Direct Expense
-1,2023-02-17 00:00:00,100,0.0,,Axis Bank,Transfer-in/Revenue-other
-2,2023-02-17 00:00:00,100,0.0,,Axis Bank,Transfer-in/Revenue-other
-04-03-2023,IMPS/P2A/306320861502/SELIMBIS/PUNJABNA/IMPS,10000.0,249444.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/IFT/TARAK/TPARTY TRANSFER,44850.0,204594.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655623398/Rajesh Ghosh/salary,10390.0,194204.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655621485/PRONAY JASH/salary,17890.0,176314.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655623829/Ananya Maiti/salary,10390.0,165924.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/IFT/AMRITA/TPARTY TRANSFER,14890.0,151034.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655626145/ANIMESH MONDAL/salary,24870.0,126164.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655626694/KALYAN MUKHERJEE/salary,12890.0,113274.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655624330/MANAJIT MAJI/salary,13390.0,99884.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655629995/Kushal Bhattachar/salar,9500.0,90384.3,debit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,"NEFT/HSBCN23065382969/SUROBHI AGRO INDUSTRIESPRI",50000.0,140384.3,credit,Axis Bank,Transfer-in/Revenue-other
-06-03-2023,INB/NEFT/AXIC230655793570/KASA DEVELOPMENT PV/ren,24800.0,115584.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-03-2023,INB/NEFT/AXIC230666067361/Swapnil Mod/factory ren,25000.0,90584.3,debit,Axis Bank,Transfer-in/Revenue-other
-07-03-2023,INB/NEFT/AXIC230666066111/Gautam Jana/salary,11890.0,78694.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-03-2023,INB/NEFT/AXIC230686857128/PINTU MONDAL/Salary,24870.0,53824.3,debit,Axis Bank,Transfer-in/Revenue-other
-09-03-2023,INB/NEFT/AXIC230686973065/Palash De/payment,15000.0,38824.3,debit,Axis Bank,Transfer-in/Revenue-other
-10-03-2023,INB/IFT/TARAK/TPARTY TRANSFER,12000.0,26824.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-03-2023,INB/NEFT/AXIC230749660383/Jyotirmay Bhunia/Salary,10000.0,16824.3,debit,Axis Bank,Transfer-in/Revenue-other
-15-03-2023,"NEFT/HSBCN23074202851/SUROBHI AGRO INDUSTRIESPRI",10000.0,26824.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-03-2023,NEFT/CBINI23075315368/B G FERTILIZER///ATTN/BG Fe,50000.0,76824.3,credit,Axis Bank,Transfer-in/Revenue-other
-16-03-2023,INB/NEFT/AXIC230759815029/ANIMESH MONDAL/expense,8000.0,68824.3,debit,Axis Bank,Transfer-in/Revenue-other
-16-03-2023,NEFT/IDIBH23075366684/M s. AZIZ KRISHI CENTRE/,15000.0,83824.3,credit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,NEFT/IDIBH23076421479/Mr. MD SIRAJUL HAQUE/,40000.0,123824.3,credit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,INB/NEFT/AXIC230760219761/PRONAY JASH/Expense,10000.0,113824.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,INB/IFT/Anup/TPARTY TRANSFER,3000.0,110824.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,INB/NEFT/AXIC230760476685/ALLIGO HORIZON P/paymen,25000.0,85824.3,debit,Axis Bank,Transfer-in/Revenue-other
-17-03-2023,GST @18% on Charge,18.0,85806.3,debit,Axis Bank,Tax/other-credit
-17-03-2023,Consolidated Charges for A/c,100.0,85706.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-03-2023,INB/715601876/GST TAX PAYMENT/,9551.0,76155.3,debit,Axis Bank,Tax/other-credit
-20-03-2023,INB/NEFT/AXIC230791054264/Starters CFO pvt/CA fee,5900.0,70255.3,debit,Axis Bank,Transfer-in/Revenue-other
-20-03-2023,UPI/P2A/307994068763/JYOTIRMOY/Bandhan B/Payment,24000.0,94255.3,credit,Axis Bank,Revenue-UPI
-21-03-2023,SAK/CASH DEP/SAK336319322/232/BY CASH,220000.0,314255.3,credit,Axis Bank,Cash/cheque deposit
-22-03-2023,INB/NEFT/AXIC230811885149/Swapnil Modi/Rent,10000.0,304255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230811885243/ALLIGO HORIZON P/Paymen,30000.0,274255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230811885493/Surobhi Agro/Payment,30000.0,244255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230811958368/PRONAY JASH/Expense,14000.0,230255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230812076748/Ad CONCEPT/Payment,20000.0,210255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,NEFT/BDBLH23639204783/KISHAN BIKASH ENTERPRISE//2,40000.0,250255.3,credit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/IFT/Anup/TPARTY TRANSFER,5000.0,245255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230812133758/Subrata Ganguly/Expense,20000.0,225255.3,debit,Axis Bank,Transfer-in/Revenue-other
-22-03-2023,INB/NEFT/AXIC230812133428/taraknath /Van promotio,15000.0,210255.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-03-2023,UPI/P2A/308202595266/JYOTIRMOY/Bandhan B/Payment,7000.0,217255.3,credit,Axis Bank,Revenue-UPI
-23-03-2023,INB/NEFT/AXIC230822371800/Aditya Bioinnova/Paymen,25000.0,192255.3,debit,Axis Bank,Transfer-in/Revenue-other
-23-03-2023,UPI/P2M/308278507658/INJAMAMUL/Canara Ba/Payment,30000.0,222255.3,credit,Axis Bank,Revenue-UPI
-23-03-2023,INB/NEFT/AXIC230822597489/SUROBHI AGRO I/Promotio,3000.0,219255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/IFT/Anup/TPARTY TRANSFER,3000.0,216255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/IFT/TARAK/TPARTY TRANSFER,15000.0,201255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/NEFT/AXIC230832722018/Gautam Jana/advance,1000.0,200255.3,debit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,UPI/P2A/308339061731/JYOTIRMOY/Bandhan B/Payment,10000.0,210255.3,credit,Axis Bank,Revenue-UPI
-24-03-2023,NEFT/WBSCN23083247263/MANOJIT ROY/ATTN/BY NEFT,40000.0,250255.3,credit,Axis Bank,Transfer-in/Revenue-other
-24-03-2023,INB/NEFT/AXIC230833024078/Jyotirmay Bhunia/Expens,5000.0,245255.3,debit,Axis Bank,Transfer-in/Revenue-other
-25-03-2023,INB/IFT/Anup/TPARTY TRANSFER,10000.0,235255.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-03-2023,UPI/P2M/308533937648/MD ABDUL /State Ban/Payment,1.0,235256.3,credit,Axis Bank,Revenue-UPI
-26-03-2023,INB/NEFT/AXIC230853311954/ALLIGO HORIZON P/Paymen,25000.0,210256.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-03-2023,INB/NEFT/AXIC230853311994/Surobhi Agro/Payment,25000.0,185256.3,debit,Axis Bank,Transfer-in/Revenue-other
-26-03-2023,UPI/P2M/345113479979/AMRIT HAZ/Axis Bank/Oid2023,1.0,185257.3,credit,Axis Bank,Revenue-UPI
+accountNumber,bankName,balance,date,transactionValue,transactionType,description,category
+50200068155719,HDFC Bank,937.0,2023-01-01,910.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-300121926417-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,677.0,2023-01-01,260.0,debit,UPI-KAMLESH KUMAR MEENA-KAMLESHMEENA5052@OKHDFCBANK-HDFC0006988-300121942226-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,397.0,2023-01-02,280.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-300259056170-A4 STICKER,Direct Expense
+50200068155719,HDFC Bank,20397.0,2023-01-03,20000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,19789.0,2023-01-03,608.0,debit,UPI-SONI HARSH PRANAV-HARSHS10043-1@OKAXIS-SRCB0000362-300376087686-WAREHOUSE AND UBER,Direct Expense
+50200068155719,HDFC Bank,19106.0,2023-01-03,683.0,debit,UPI-SONI HARSH PRANAV-HARSHS10043-1@OKAXIS-SRCB0000362-300376120939-AAKASH CAKE,Direct Expense
+50200068155719,HDFC Bank,16106.0,2023-01-04,3000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,15986.0,2023-01-04,120.0,debit,UPI-TYAGI SHAILESH-TYAGIR1979@OKAXIS-UTIB0000297-300401446068-PORTER ANNU,Direct Expense
+50200068155719,HDFC Bank,15936.0,2023-01-04,50.0,debit,UPI-DEVENDRA SHAH-PAYTMQR2810050501016DEVYJVGP7FQ@PAYTM-PYTM0123456-300403385052-PRINT,Direct Expense
+50200068155719,HDFC Bank,14942.0,2023-01-05,994.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKHDFCBANK-CNRB0000033-300534076661-REIMBURSEMENT,Direct Expense
+50200068155719,HDFC Bank,13792.0,2023-01-05,1150.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKHDFCBANK-CNRB0000033-300536720392-SHOOT SAMPLES COURANK LIMITED,Direct Expense
+50200068155719,HDFC Bank,13721.0,2023-01-06,71.0,debit,UPI-DONGA PARTH PRAVINBH-PARTH789456123@OKICICI-PYTM0123456-300650403333-PORTER,Direct Expense
+50200068155719,HDFC Bank,13161.0,2023-01-06,560.0,debit,UPI-MAHAVIR XEROX-PAYTMQR2810050501011947WXC2WFOM@PAYTM-PYTM0123456-300652195236-TARANG BOOK PRINTI,Direct Expense
+50200068155719,HDFC Bank,13031.0,2023-01-07,130.0,debit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD041@OKSBI-SBIN0000429-300779853391-PORTER,Direct Expense
+50200068155719,HDFC Bank,11731.0,2023-01-08,1300.0,debit,UPI-KAMLESH KUMAR MEENA-KAMLESHMEENA5052@OKHDFCBANK-HDFC0006988-300800782757-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,11609.0,2023-01-09,122.0,debit,UPI-DATWANI KHUSHBUMAHE-KDATWANI88@OKHDFCBANK-HDFC0006988-300922173919-PORTER FROM WAREHO,Direct Expense
+50200068155719,HDFC Bank,10569.0,2023-01-09,1040.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-300925425580-BOMBAY GOODS,Direct Expense
+50200068155719,HDFC Bank,10144.0,2023-01-09,425.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-300927426988-PORTER FROM KALUPU,Direct Expense
+50200068155719,HDFC Bank,8554.0,2023-01-09,1590.0,debit,UPI-THE FAIR FOOD COMPAN-Q132311934@YBL-YESB0YBLUPI-300935795277-CAMPAIGN CHOCOLATE,Direct Expense
+50200068155719,HDFC Bank,8394.0,2023-01-10,160.0,debit,UPI-DEVENDRA SHAH-PAYTMQR2810050501016DEVYJVGP7FQ@PAYTM-PYTM0123456-301042290771-UPI,Direct Expense
+50200068155719,HDFC Bank,8044.0,2023-01-10,350.0,debit,UPI-JIO MART GROCERY-JIOMARTGROCERY@YESBANK-YESB0000001-301037821506- PAYMENT,Direct Expense
+50200068155719,HDFC Bank,7214.0,2023-01-10,830.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-301053480864-SHOANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,7292.0,2023-01-10,78.0,credit,UPI-JIO MART GROCERY-JIOMARTGROCERY@YESBANK-YESB0000001-301038067585-REFUND TRANSACTION,Revenue UPI
+50200068155719,HDFC Bank,6192.0,2023-01-11,1100.0,debit,UPI-BHARWAD GAUTAMM-GAUTAM.BHARVAD20-1@OKICICI-UBIN0826227-301169331023-MANSI WATER BILL,Direct Expense
+50200068155719,HDFC Bank,5342.0,2023-01-11,850.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-301172239816-PORTER,Direct Expense
+50200068155719,HDFC Bank,4342.0,2023-01-11,1000.0,debit,UPI-TEJAS PATEL-9824019614@PAYTM-PYTM0123456-301175679120-MANSI OFFICE CATRI,Direct Expense
+50200068155719,HDFC Bank,4092.0,2023-01-11,250.0,debit,UPI-TEJAS HARESHBHAI PAT-9824019614@PAYTM-PYTM0123456-301175879181-CATRIDGE REPAIRING,Direct Expense
+50200068155719,HDFC Bank,3765.0,2023-01-13,327.0,debit,UPI-GROFERS INDIA PRIVAT-GROFERSINDIA.RZP@AXISBANK-UTIB0000100-301313201361-BLINKIT,Direct Expense
+50200068155719,HDFC Bank,3705.0,2023-01-13,60.0,debit,UPI-SWIGGY-SWIGGYSTORES@ICICI-ICIC0DC0099-301365465239-PAYMENT FOR SWIGGY,Direct Expense
+50200068155719,HDFC Bank,3066.0,2023-01-13,639.0,debit,UPI-TWINKLE BHATIA-TWINKLE220522@OKSBI-SBIN0016322-301314229077-SHREYA BIRTHDAYCA,Direct Expense
+50200068155719,HDFC Bank,1376.0,2023-01-15,1690.0,debit,UPI-KAMLESH KUMAR MEENA-KAMLESHMEENA5052@OKHDFCBANK-HDFC0006988-301560597994-SATURDAY SUNDAY LU,Direct Expense
+50200068155719,HDFC Bank,16376.0,2023-01-16,15000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,8055.0,2023-01-16,8321.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086-1@OKHDFCBANK-HDFC0000006-301679698709ANK LIMITED,Direct Expense
+50200068155719,HDFC Bank,7056.0,2023-01-16,999.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086-1@OKHDFCBANK-HDFC0000006-301680119578-VTANS AI STOCK,Direct Expense
+50200068155719,HDFC Bank,6640.0,2023-01-16,416.0,debit,UPI-PATHAK HITESHBHAI JA-HITESHPATHAK4942@OKICICI-BKID0002012-301682048466-PORTER AI STOCK,Direct Expense
+50200068155719,HDFC Bank,5740.0,2023-01-16,900.0,debit,UPI-SMIT RAMESHBHAI PATE-SMIT3845@OKICICI-IOBA0003261-301684013319-CATRIDGE REFILL 3,Direct Expense
+50200068155719,HDFC Bank,5555.0,2023-01-18,185.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-301821155018-PORTER,Direct Expense
+50200068155719,HDFC Bank,25555.0,2023-01-19,20000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,23952.0,2023-01-19,1603.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-301951032899-SWEEPER SALLARY,Direct Expense
+50200068155719,HDFC Bank,23812.0,2023-01-19,140.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-301951308652-PORTER REGULAR ORD,Direct Expense
+50200068155719,HDFC Bank,23162.0,2023-01-19,650.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-301952789024-YOGESH BIRTHDAY CA,Direct Expense
+50200068155719,HDFC Bank,22612.0,2023-01-20,550.0,debit,UPI-MALVIYA ASHOKBHAI-ASHOKMALVIYA795-1@OKSBI-KKBK0002568-302078382545-URBAN CLAP FOR DOO,Direct Expense
+50200068155719,HDFC Bank,15824.0,2023-01-20,6788.0,debit,UPI-SONI HARSH PRANAVBHA-HARSHS10043@OKHDFCBANK-HDFC0006988-302080895574-VTRANSAND TRANSPO,Direct Expense
+50200068155719,HDFC Bank,15234.0,2023-01-21,590.0,debit,UPI-AIRTEL PAYMENTS BANK-AIRTEL66.PAYU@IANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,14974.0,2023-01-21,260.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-302103699167-PORTER FOR REGULAR,Direct Expense
+50200068155719,HDFC Bank,13544.0,2023-01-22,1430.0,debit,UPI-KAMLESH KUMAR MEENA-KAMLESHMEENA5052@OKHDFCBANK-HDFC0006988-302223527636-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,13414.0,2023-01-22,130.0,debit,UPI-RAMLAL SHANKAR JOGI-9662681246@IBL-PUNB0396600-302224416400-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,12214.0,2023-01-23,1200.0,debit,UPI-RAVAL SANJAY-RAVALSANJAY185@OKHDFCBANK-INDB0000232-302346458049-HEENA STOCKAND PO,Direct Expense
+50200068155719,HDFC Bank,10624.0,2023-01-25,1590.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-302588534131-MILK WAREHOUSE,Direct Expense
+50200068155719,HDFC Bank,10509.0,2023-01-25,115.0,debit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD041@OKSBI-SBIN0000429-302592459987-PORTERFOR TARANG,Direct Expense
+50200068155719,HDFC Bank,7989.0,2023-01-25,2520.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086-1@OKHDFCBANK-HDFC0000006-302500409184-26 DEC TO 25 JAN P,Direct Expense
+50200068155719,HDFC Bank,7739.0,2023-01-27,250.0,debit,UPI-MINESH TRADING COMPA-PAYTMQR2810050501013M1SFBQS1FZR@PAYTM-PYTM0123456-302731463851-TOILET ROLL,Direct Expense
+50200068155719,HDFC Bank,7339.0,2023-01-27,400.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-302732220611-PORTER YELLOW POUC,Direct Expense
+50200068155719,HDFC Bank,6656.9,2023-01-27,682.1,debit,UPI-ZOMATO LTD-ZOMATO-ORDER@PAYTM-PYTM0123456-302732547370-ZOMATO PAYMENT,Direct Expense
+50200068155719,HDFC Bank,5356.9,2023-01-27,1300.0,debit,UPI-XXXXXX0681-ICIC0001371-302732859729-ANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,5144.9,2023-01-28,212.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-302856771575-PORTER AI STOCK,Direct Expense
+50200068155719,HDFC Bank,5084.9,2023-01-28,60.0,debit,UPI-SWIGGY-SWIGGYSTORES@ICICI-ICIC0DC0099-302803089542-PAYMENT FOR SWIGGY,Direct Expense
+50200068155719,HDFC Bank,5144.9,2023-01-28,60.0,credit,UPI-SWIGGY-SWIGGYSTORES@ICICI-ICIC0DC0099-302803136592-TXN FAILED AT MERC,Revenue UPI
+50200068155719,HDFC Bank,4512.9,2023-01-28,632.0,debit,UPI-BLINKIT-PAYTM-70258461@PAYTM-PYTM0123456-302858066729-BLINKIT PAYMENT,Direct Expense
+50200068155719,HDFC Bank,4461.9,2023-01-28,51.0,debit,UPI-BHUPENDRABHAI ISHWAR-BHUPENDRA22279@OKAXIS-BARB0ASARWA-302858139977-SULAY BHAI TIFFIN,Direct Expense
+50200068155719,HDFC Bank,2641.9,2023-01-29,1820.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-302979633531-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,2241.9,2023-01-30,400.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-303008797316-METRO COURIER,Direct Expense
+50200068155719,HDFC Bank,1241.9,2023-01-31,1000.0,debit,UPI-ANNU NARESH VISHWAKA-ANNU928@OKSBI-HDFC0001678-303124341049-DTDC KTP PARCELXXXXXXX1380-COMPANY SEAL,Direct Expense
+50200068155719,HDFC Bank,441.9,2023-01-31,800.0,debit,IMPS-303115157142-HIREN LADANI-SRCB-XXXXXXXXXXX1380-COMPANY SEAL,Direct Expense
+50200068155719,HDFC Bank,20441.9,2023-02-01,20000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,20020.9,2023-02-02,421.0,debit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD041@OKSBI-SBIN0000429-303377479952-PORTERFOR MENIQUE,Direct Expense
+50200068155719,HDFC Bank,19782.9,2023-02-02,238.0,debit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD041@OKSBI-SBIN0000429-303377488283-URBAN CLAP FOR MANANK LIMITED,Direct Expense
+50200068155719,HDFC Bank,18782.9,2023-02-03,1000.0,debit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD041@OKSBI-SBIN0000429-303495217456-TEA ANDMASALA,Direct Expense
+50200068155719,HDFC Bank,17782.9,2023-02-03,1000.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-303499718901-PACKAGING MATERIAL,Direct Expense
+50200068155719,HDFC Bank,14782.9,2023-02-04,3000.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-303513170421-MILK WAREHOUSE,Direct Expense
+50200068155719,HDFC Bank,13812.3,2023-02-04,970.6,debit,UPI-ZOMATO LTD-ZOMATO-ORDER@PAYTM-PYTM0123456-303518739512-ZOMATO PAYMENT,Direct Expense
+50200068155719,HDFC Bank,12382.3,2023-02-05,1430.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-303639564770-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,9382.3,2023-02-06,3000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,9222.3,2023-02-07,160.0,debit,UPI-GANDHI CHIRAG GULSHA-PAYTMQR2810050501016ULW86CRPH6G@PAYTM-PYTM0123456-303881339644-PHOTO COPY,Direct Expense
+50200068155719,HDFC Bank,7722.3,2023-02-07,1500.0,debit,UPI-SONI HARSH PRANAVBHA-HARSHS10043@OKHDFCBANK-HDFC0006988-303887511988-DIARY PRINTING,Direct Expense
+50200068155719,HDFC Bank,6582.3,2023-02-08,1140.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-303905322876-WATER BILL WAREHOU,Direct Expense
+50200068155719,HDFC Bank,5932.3,2023-02-08,650.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-303907301071-REKHA BIRTHDAY CAK,Direct Expense
+50200068155719,HDFC Bank,25932.3,2023-02-08,20000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,4213.74,2023-02-08,21718.56,debit,UPI-AGODA-PAYTM-52649125@PAYTM-PYTM0123456-303952338081-OID1230646132@AGODANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,9213.74,2023-02-08,5000.0,credit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086-1@OKSBI-HDFC0000006-303963190800-INSTALL MEN ONE,Revenue UPI
+50200068155719,HDFC Bank,8597.14,2023-02-11,616.6,debit,UPI-ZOMATO-PAYZOMATOUPI@ICICI-ICIC0DC0099-304280290716-UPI,Direct Expense
+50200068155719,HDFC Bank,6500.14,2023-02-11,2097.0,debit,UPI-ANTARA SANGANI-ANTARA.SANGANI@OKICICI-ICIC0000067-304281349893-MOBILE RECHARGE,Direct Expense
+50200068155719,HDFC Bank,5200.14,2023-02-12,1300.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-304303448291-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,4047.14,2023-02-13,1153.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-304424567691-REIMBURSEMENT,Direct Expense
+50200068155719,HDFC Bank,3083.32,2023-02-13,963.82,debit,UPI-ZOMATO-PAYZOMATOUPI@ICICI-ICIC0DC0099-304426283412-CAKE FOR BUMMER 3,Direct Expense
+50200068155719,HDFC Bank,2683.32,2023-02-13,400.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKSBI-SBIN0031507-304429861185-WAREHOUSE ICE CREA,Direct Expense
+50200068155719,HDFC Bank,1983.32,2023-02-15,700.0,debit,UPI-MAHAVIR XEROX-PAYTMQR2810050501011947WXC2WFOM@PAYTM-PYTM0123456-304667937863-VISTING CARD PRINT,Direct Expense
+50200068155719,HDFC Bank,1165.32,2023-02-15,818.0,debit,UPI-ANILKUMAR MULJIBHAI -9714736572@IBL-SBIN0010861-304674399678-URBAN CLAPNTU@OKICICI-CNRB0000033-304814479742-TEA,Direct Expense
+50200068155719,HDFC Bank,445.32,2023-02-17,720.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-304814479742-TEAAND SUGAR WARE,Direct Expense
+50200068155719,HDFC Bank,30445.32,2023-02-17,30000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITEDANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,28412.32,2023-02-17,2033.0,debit,UPI-GROFERS INDIA PVT LT-GROFERS.PAYU@HDFCBANK-HDFC0000499-304818145311-UPI TRANSACTION FO,Direct Expense
+50200068155719,HDFC Bank,28128.32,2023-02-17,284.0,debit,UPI-GROFERS INDIA PRIVAT-GROFERSINDIA.RZP@AXISBANK-UTIB0000100-304822439121-PAYVIARAZORPAY,Direct Expense
+50200068155719,HDFC Bank,27928.32,2023-02-17,200.0,debit,UPI-RITA D GUPTA-PAYTMQR281005050101Q600DLXV0A2S@PAYTM-PYTM0123456-304825232927-UPI,Direct Expense
+50200068155719,HDFC Bank,27666.32,2023-02-19,262.0,debit,UPI-HOTEL SUVEG DIET-PINELABS.2105913@ICICI-ICIC0DC0099-305065368791-UPI,Direct Expense
+50200068155719,HDFC Bank,27226.32,2023-02-19,440.0,debit,UPI-MOHANCHOUDHARY-MOHANCHODHARI068@OKSBI-UBIN0554979-305066360428-STATION TO HOTEL,Direct Expense
+50200068155719,HDFC Bank,25666.32,2023-02-19,1560.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-305067040902-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,24437.32,2023-02-19,1229.0,debit,UPI-HOTEL TUNGA PARADISE-HOTELTUNGAPARADISE.64013247@HDFCBANK-HDFC0000001-305070617661-LUNCH BOMBAY,Direct Expense
+50200068155719,HDFC Bank,24267.32,2023-02-19,170.0,debit,UPI-AFTAB ABUBAKER MANSU-9768181894@PAYTM-UBIN0531871-305071618922-OLA,Direct Expense
+50200068155719,HDFC Bank,24008.32,2023-02-19,259.0,debit,UPI-SAJIDA BEGAM WO SIRA-SIRTAJAHMADAHMAD49@OKAXIS-BARB0HANSUL-305080069263-OLA,Direct Expense
+50200068155719,HDFC Bank,23760.32,2023-02-20,248.0,debit,UPI-MR JITESH KUMAR SING-BHARATPE90726029367@YESBANKLTD-YESB0YESUPI-305183646717-PAY TO BHARATPE ME,Direct Expense
+50200068155719,HDFC Bank,22920.32,2023-02-20,840.0,debit,UPI-DATWANI KHUSHBUMAHE-KDATWANI88@OKHDFCBANK-HDFC0006988-305192767072-EVENT FOANK LIMITED,Direct Expense
+50200068155719,HDFC Bank,23750.32,2023-02-20,830.0,credit,UPI-DATWANI KHUSHBUMAHE-KDATWANI88@OKHDFCBANK-HDFC0006988-305192803714-UPI,Revenue UPI
+50200068155719,HDFC Bank,24050.32,2023-02-20,300.0,credit,UPI-TARANG SHAH-TARANG.SHAH94@OKICICI-ICIC0001216-341776718572-UPI,Revenue UPI
+50200068155719,HDFC Bank,20400.32,2023-02-20,3650.0,debit,POS 403875XXXXXX3072 NESCO LIMITED,Direct Expense
+50200068155719,HDFC Bank,20120.32,2023-02-20,280.0,debit,UPI-SANJAY SHIVNARAYAN S-SS956072@OKICICI-BARB0VIREAS-305193862989-UPI,Direct Expense
+50200068155719,HDFC Bank,19262.32,2023-02-20,858.0,debit,UPI-SEEBA BANO-MOHDJAVED1613-1@OKHDFCBANK-BARB0DELHUP-305101752257-OLA,Direct Expense
+50200068155719,HDFC Bank,18978.32,2023-02-21,284.0,debit,UPI-RAHUL SINGH-RAHULRAJPUTSINGH@AXL-CNRB0000033-305218852233-OLA,Direct Expense
+50200068155719,HDFC Bank,18202.32,2023-02-21,776.0,debit,UPI-COCOCAFE MUM019TERM-Q307640148@YBL-YESB0YBLUPI-305220262333-DINNER,Direct Expense
+50200068155719,HDFC Bank,18002.32,2023-02-23,200.0,debit,UPI-RAJ STATIONERS-PAYTMQR2810050501011XAN4ZU2YSIQ@PAYTM-PYTM0123456-305448437899-VISTING CARD HOLDE,Direct Expense
+50200068155719,HDFC Bank,17675.32,2023-02-24,327.0,debit,UPI-BLINKIT-PAYTM-70258461@PAYTM-PYTM0123456-305570100017-BLINKIT PAYMENT,Direct Expense
+50200068155719,HDFC Bank,17705.32,2023-02-24,30.0,credit,UPI-BLINKIT-PAYTM-70258461@PAYTM-PYTM0123456-305525534830-EXPRESS,Revenue PG Non split
+50200068155719,HDFC Bank,15165.32,2023-02-25,2540.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-305699906905-PETROL 25JAN TO 25,Direct Expense
+50200068155719,HDFC Bank,13735.32,2023-02-26,1430.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-305714545494-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,11735.32,2023-02-27,2000.0,debit,UPI-DESAI SANSKAR BABU-9824076762@IBL-BARB0DBSOLA-305831751822-RIBBION ROLLANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,9935.32,2023-02-27,1800.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-305832580218-HEENA STOCK,Direct Expense
+50200068155719,HDFC Bank,6935.32,2023-03-02,3000.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-306198029568-WAREHOUSE MILK,Direct Expense
+50200068155719,HDFC Bank,6275.32,2023-03-02,660.0,debit,UPI-SANGHAVI BROTHERS-SANGHAVIBROTHERS.68010230@HDFCBANK-HDFC0000001-306101739905-RACK PIPE,Direct Expense
+50200068155719,HDFC Bank,5775.32,2023-03-02,500.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,5395.32,2023-03-02,380.0,debit,UPI-SANGHAVI BROTHERS-SANGHAVIBROTHERS.64009939@HDFCBANK-HDFC0000001-306104166011-PAINT AND ANGEL FO,Direct Expense
+50200068155719,HDFC Bank,4988.32,2023-03-02,407.0,debit,UPI-MALVIYA MANOHARLAL L-MANOHAR201175@OKSBI-SBIN0016026-306105636695-URBAN CLAP,Direct Expense
+50200068155719,HDFC Bank,4388.32,2023-03-02,600.0,debit,IMPS-306117144908-HIREN LADANI-SRCB-XXXXXXXXXXX1380-UC OFFICE WASHROOM,Direct Expense
+50200068155719,HDFC Bank,2180.32,2023-03-03,2208.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-306231949142-AISTOCK,Direct Expense
+50200068155719,HDFC Bank,99.32,2023-03-04,2081.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-306348643517-TOTAL BAG TRANSPOR,Direct Expense
+50200068155719,HDFC Bank,7099.32,2023-03-05,7000.0,credit,IB FUNDS TRANSFER CR-50200036615972-BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,4832.32,2023-03-05,2267.0,debit,UPI-URBANCOMPANY-PAYTM-URBANCOMPANY@PAYTM-PYTM0123456-306461867741-PAINTING EXPENSE,Direct Expense
+50200068155719,HDFC Bank,4052.32,2023-03-05,780.0,debit,UPI-SOLANKI PARTHIV-PARTHIV.BUMMER28@OKSBI-HDFC0006988-306462439640-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,3952.32,2023-03-10,100.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PIANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,1952.32,2023-03-10,2000.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-306962421477-SABA STOCK MUMBAI,Direct Expense
+50200068155719,HDFC Bank,1352.32,2023-03-10,600.0,debit,UPI-NISCHAL KUMAR SHARMA-ANIL98296@OKICICI-HDFC0000281-306968305340-REIMBURSEMENT,Direct Expense
+50200068155719,HDFC Bank,21352.32,2023-03-10,20000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,18713.32,2023-03-11,2639.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKICICI-CNRB0000033-307093293815-REIMBURSEMENT,Direct Expense
+50200068155719,HDFC Bank,18413.32,2023-03-11,300.0,debit,UPI-SONI HARSH PRANAVBHA-HARSHS10043@OKHDFCBANK-HDFC0006988-307093344368-OFFICECLEANING 2,Direct Expense
+50200068155719,HDFC Bank,17913.32,2023-03-11,500.0,debit,UPI-SONI HARSH PRANAVBHA-HARSHS10043@OKHDFCBANK-HDFC0006988-307093471665-ELASTICSENT TO BO,Direct Expense
+50200068155719,HDFC Bank,13702.32,2023-03-11,4211.0,debit,UPI-URBANCLAP-URBANCLAP.RZP@AXISBANK-UTIB0001506-307095106680-OOFICE PAINT,Direct Expense
+50200068155719,HDFC Bank,12532.32,2023-03-12,1170.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-307110268617-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,12433.32,2023-03-13,99.0,debit,UPI-URBANCOMPANY-PAYTM-URBANCOMPANY@PAYTM-PYTM0123456-307229224789-UPI,Direct Expense
+50200068155719,HDFC Bank,9533.32,2023-03-13,2900.0,debit,UPI-XXXXXX0681-ICIC0001371-307232337824-AVA WATER,Direct Expense
+50200068155719,HDFC Bank,9333.32,2023-03-13,200.0,debit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD041@OKSBI-SBIN0000429-307232358585-OFFICEANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,8683.32,2023-03-15,650.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-307473864370-AC SERVICE WAREHOU,Direct Expense
+50200068155719,HDFC Bank,8203.32,2023-03-15,480.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-307473880134-A4 SIZE PAPER,Direct Expense
+50200068155719,HDFC Bank,8088.32,2023-03-15,115.0,debit,UPI-MR ANIL M KALAL-ANILKALAL1994-1@OKICICI-CBIN0283183-307479929429-TEA COFEE,Direct Expense
+50200068155719,HDFC Bank,7988.32,2023-03-17,100.0,debit,UPI-GUPTA PUSHPABEN RAMC-GUPTASANDHYA0007@OKAXIS-UTIB0003606-307623160528-PORTER,Direct Expense
+50200068155719,HDFC Bank,7388.32,2023-03-17,600.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-307623426436-WAREHOUSE ELECTRIC,Direct Expense
+50200068155719,HDFC Bank,37388.32,2023-03-18,30000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,28388.32,2023-03-18,9000.0,debit,UPI-RESHAM KAPOOR-RESHAM21295@OKHDFCBANK-HDFC0000248-307745342733-RESHAM INFLUENCER,Direct Expense
+50200068155719,HDFC Bank,26958.32,2023-03-19,1430.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-307863463587-SUNDAY LUNCH,Direct Expense
+50200068155719,HDFC Bank,23958.32,2023-03-20,3000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,23959.32,2023-03-21,1.0,credit,IMPS-308011117773-RAZORPAY 390-ICIC-XXXXXXXX6751-RAZORPAY TESTING ACC VALIDATIO,Revenue PG split
+50200068155719,HDFC Bank,13959.32,2023-03-30,10000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,6459.32,2023-03-30,7500.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,11459.32,2023-04-11,5000.0,credit,UPI-HIRENKUMAR GIRDHARBH-CONTACT.FROZENFLAVORS-1@OKICICI-KKBK0001358-310191008621-RAMESH ADVANCE,Revenue UPI
+50200068155719,HDFC Bank,10633.32,2023-04-11,826.0,debit,UPI-H AND J ASSOCIATES-CF.HANDJASSOCIATEANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,9990.22,2023-04-11,643.1,debit,UPI-PRAGYA NAVRATAN CHHA-CPRAGYA22@OKICICI-ICIC0001837-310199912837-HIREN BDY CAKE,Direct Expense
+50200068155719,HDFC Bank,8030.22,2023-04-11,1960.0,debit,UPI-HIRENKUMAR GIRDHARBH-CONTACT.FROZENFLAVORS-2@OKAXIS-HDFC0005198-310102275727-NARAYAN TIFFIN,Direct Expense
+50200068155719,HDFC Bank,7464.22,2023-04-11,566.0,debit,UPI-HIRENKUMAR GIRDHARBH-CONTACT.FROZENFLAVORS-2@OKAXIS-HDFC0005198-310102595651-TALLY SUBSCRIPTION,Direct Expense
+50200068155719,HDFC Bank,27464.22,2023-04-13,20000.0,credit,UPI-POONAM DINESHBHAI MI-POONAMMISTRY7493-2@OKICICI-CNRB0000033-346948167469-UPI,Revenue UPI
+50200068155719,HDFC Bank,7464.22,2023-04-13,20000.0,debit,UPI-PANDYA DHRUV-DHRUVPANDYA148-3@OKHDFCBANK-CNRB0000033-310341514350-UPI,Direct Expense
+50200068155719,HDFC Bank,3714.22,2023-04-13,3750.0,debit,UPI-XXXXXX5013-UBIN0906735-310344941929-SKY GRAY FROM NARO,Direct Expense
+50200068155719,HDFC Bank,13714.22,2023-04-13,10000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,9964.22,2023-04-14,3750.0,debit,UPI-XXXXXX5013-UBIN0906735-310460958228-BALANCE PAYMENT,Direct Expense
+50200068155719,HDFC Bank,9904.22,2023-04-15,60.0,debit,UPI-SWIGGYGENIE-SWIGGYGENIE@YESPAY-YESB0YESUPI-310590117226-PAY FOR MERCHANT,Direct Expense
+50200068155719,HDFC Bank,8467.22,2023-04-17,1437.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKHDFCBANK-CNRB0000033-310742761965-SABA VRL 1668 GRMN,Direct Expense
+50200068155719,HDFC Bank,4367.22,2023-04-18,4100.0,debit,UPI-XXXXXX2559-GSCB0ADC001-310871753781-MARCH 23 MAINTENAN,Direct Expense
+50200068155719,HDFC Bank,4377.22,2023-04-19,10.0,credit,IMPS-310917704089-RZPX PVT LTD-YESB-XXXXXXXXXXX9716-BALLR APPARELS PVT LTD FUND,Revenue PG Non split
+50200068155719,HDFC Bank,9367.22,2023-04-19,4990.0,credit,IMPS-310917708038-RZPX PVT LTD-YESB-XXXXXXXXXXX9716-BALLR APPARELS PVT LTD FUNDANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,4367.22,2023-04-19,5000.0,debit,UPI-DELHIVERY LIMITED-PAYTM-8765390@PAYTM-PYTM0123456-310992392199-DELHIVERY RECHARGE,Direct Expense
+50200068155719,HDFC Bank,3322.22,2023-04-21,1045.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-311140756252-SABAV TRANS,Direct Expense
+50200068155719,HDFC Bank,153322.22,2023-04-23,150000.0,credit,IB FUNDS TRANSFER CR-50200036615972-BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,153258.22,2023-04-24,64.0,debit,UPI-PATEL SAMIR JAYSUKHB-DREAMSJPATEL01@OKICICI-IDFB0040101-311404611996-PORTARKEYS,Direct Expense
+50200068155719,HDFC Bank,134809.22,2023-04-24,18449.0,debit,UPI-XXXXXX0652-ICIC0000845-311412877361-WAREHOUSE PANTRY S,Direct Expense
+50200068155719,HDFC Bank,130009.22,2023-04-25,4800.0,debit,UPI-SONI HARSH PRANAVBHA-HARSHS10043@OKHDFCBANK-HDFC0006988-311535008212-AI ELASTIC,Direct Expense
+50200068155719,HDFC Bank,125009.22,2023-04-26,5000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,124930.22,2023-04-26,79.0,debit,UPI-BLINK COMMERCE-GROFERS.PAYU@AXISBANK-UTIB0000000-311660579449-UPI TRANSACTION FO,Direct Expense
+50200068155719,HDFC Bank,122900.22,2023-04-27,2030.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-311781529850-PREMCO ELASTIC TO,Direct Expense
+50200068155719,HDFC Bank,112900.22,2023-04-27,10000.0,debit,UPI-DELHIVERY LIMITED-PAYTM-8765390@PAYTM-PYTM0123456-311786132381-DELHIVERY RECHARGE,Direct Expense
+50200068155719,HDFC Bank,51720.22,2023-04-27,61180.0,debit,50200060898961-TPT-INV 0165-DARSHAK ELECTRONICS,Direct Expense
+50200068155719,HDFC Bank,51650.22,2023-04-27,70.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-311787741493-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,46650.22,2023-04-27,5000.0,debit,UPI-RAVAL SANJAY-RAVALSANJAY185@OKHDFCBANK-INDB0000232-311789473502-ADVANCE SALAANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,40650.22,2023-04-28,6000.0,debit,IMPS-311812147188-MOHAMMAD ANAS MEHBOOBMIYA SHAIKH-UBIN-XXXXXXXXXXX5013-BOTAD TRANSPORT,Direct Expense
+50200068155719,HDFC Bank,40350.22,2023-04-28,300.0,debit,UPI-BHARWAD GAUTAMM-GAUTAM.BHARVAD20-1@OKICICI-UBIN0826227-311810429379-WATER BILL MARCH,Direct Expense
+50200068155719,HDFC Bank,40280.22,2023-04-28,70.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-311812609837-OFFICE CHAI,Direct Expense
+50200068155719,HDFC Bank,29011.22,2023-04-28,11269.0,debit,UPI-XXXXXX0015-HDFC0001206-311813287851-INV 057,Direct Expense
+50200068155719,HDFC Bank,22711.22,2023-04-29,6300.0,debit,IMPS-311912175221-MOHAMMAD ANAS MEHBOOBMIYA SHAIKH-UBIN-XXXXXXXXXXX5013-INV 28,Direct Expense
+50200068155719,HDFC Bank,22576.22,2023-04-29,135.0,debit,UPI-VIPUL JAYESHBHAI CHA-VC1651999@OKICICI-BARB0DBBAPU-311932358373-PORTER BILLSAND O,Direct Expense
+50200068155719,HDFC Bank,22512.22,2023-04-29,64.0,debit,UPI-KHUSHI GUPTA-KHUSHIGUPTA331@OKAXIS-KKBK0000328-311933083148-KEY PORTER,Direct Expense
+50200068155719,HDFC Bank,22252.22,2023-04-29,260.0,debit,UPI-BHARWAD GAUTAMM-GAUTAM.BHARVAD20-1@OKICICI-UBIN0826227-311933622305-BISLERYSMALL,Direct Expense
+50200068155719,HDFC Bank,22212.22,2023-04-29,40.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-311939223298-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,12212.22,2023-04-29,10000.0,debit,ATW-403875XXXXXX3072-ABHGJ002-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,11212.22,2023-04-29,1000.0,debit,ATW-403875XXXXXX3072-ABHGJ002-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,10312.22,2023-04-29,900.0,debit,UPI-PARIKSHITA DASH-PDASH197@OKHDFCBANK-BKID0002068-311947064953-GLAM FLAM FORWARD,Direct Expense
+50200068155719,HDFC Bank,312.22,2023-04-30,10000.0,debit,UPI-SONI HARSH PRANAVBHA-HARSHS10043@OKHDFCBANK-HDFC0006988-312057979136-DELHIVEANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,15312.22,2023-04-30,15000.0,credit,IB FUNDS TRANSFER CR-50200036615972-BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,3312.22,2023-04-30,12000.0,debit,UPI-RAVAL SANJAY-RAVALSANJAY185@OKHDFCBANK-INDB0000232-312059401877-UPI,Direct Expense
+50200068155719,HDFC Bank,3082.22,2023-05-01,230.0,debit,UPI-SWIGGY-UPISWIGGY@ICICI-ICIC0DC0099-312190104272-CAKE PINTU BHAI,Direct Expense
+50200068155719,HDFC Bank,3007.22,2023-05-01,75.0,debit,UPI-SHREYA MOHAN SHARMA-SHREYA.SHARMA.AHD@OKSBI-SBIN0060388-312191469873-OFFICETEA,Direct Expense
+50200068155719,HDFC Bank,2922.22,2023-05-01,85.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-312193953943-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,2622.22,2023-05-02,300.0,debit,UPI-PARIKSHITA DASH-PDASH197@OKHDFCBANK-BKID0002068-312211701719-PIONEX,Direct Expense
+50200068155719,HDFC Bank,2096.22,2023-05-02,526.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-312213684464-PORTER FOR FBA RET,Direct Expense
+50200068155719,HDFC Bank,32096.22,2023-05-02,30000.0,credit,IB FUNDS TRANSFER CR-50200036615972 -BALLR APPARELS PRIVATE LIMITED,Transfer-in/Revenue-other
+50200068155719,HDFC Bank,31986.22,2023-05-02,110.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-312220032703-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,31786.22,2023-05-02,200.0,debit,UPI-MOHAMMADFAIZANAZHAR-FAIZANPATHAN56@OKAXIS-BARB0DARIAP-312220051711-UPI,Direct Expense
+50200068155719,HDFC Bank,31186.22,2023-05-03,600.0,debit,UPI-SMARTSHIFT LOGISTICS-SMARTSHIFTLOGISTICS.RZP@AXISBANK-UTIB0000100-312338804747-DUECLEARANCE,Direct Expense
+50200068155719,HDFC Bank,21186.22,2023-05-03,10000.0,debit,UPI-PINTU RAGHAVJIBHAI K-PRAJAPATI1881PINTU@OKAXIS-CNRB0000033-312339526489-PETTY CASH,Direct Expense
+50200068155719,HDFC Bank,11186.22,2023-05-03,10000.0,debit,UPI-DELHIVERY LIMITED-PAYTM-8765390@PAYTM-PYTM0123456-312344465139-DELHIVERY RECANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,10476.22,2023-05-03,710.0,debit,POS 403875XXXXXX3072 GALLOPS HOSPITAL,Direct Expense
+50200068155719,HDFC Bank,10391.22,2023-05-04,85.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-312467184894-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,10316.22,2023-05-04,75.0,debit,UPI-SHREYA MOHAN SHARMA-SHREYA.SHARMA.AHD@OKSBI-SBIN0060388-312467212013-OFFICETEA,Direct Expense
+50200068155719,HDFC Bank,10296.22,2023-05-04,20.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-312472296800-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,10246.22,2023-05-04,50.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-312474411681-UPI,Direct Expense
+50200068155719,HDFC Bank,10146.22,2023-05-05,100.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKAXIS-SBIN0031229-312597772093-OFFICETEA,Direct Expense
+50200068155719,HDFC Bank,9346.22,2023-05-06,800.0,debit,UPI-SONALBEN KHAKHRAWALA-PAYTMQR28100505010116UNI8284U4R@PAYTM-PYTM0123456-312616660835-COFFIE POWDER,Direct Expense
+50200068155719,HDFC Bank,9227.22,2023-05-06,119.0,debit,UPI-BLINK COMMERCE-GROFERS.PAYU@AXISBANK-UTIB0000000-312616999515-UPI TRANSACTION FO,Direct Expense
+50200068155719,HDFC Bank,9117.22,2023-05-06,110.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-312617212547-OFFICETEA,Direct Expense
+50200068155719,HDFC Bank,8834.22,2023-05-06,283.0,debit,UPI-TALLY SOLUTIONS PRIV-TALLYSOLUTIONS.PAYU@INDUS-INDB0002201-312646864086-UPITRANSACTION,Direct Expense
+50200068155719,HDFC Bank,8734.22,2023-05-08,100.0,debit,UPI-ANIL KALAL-ANILKALAL.68010913@HDFCBANK-HDFC0000001-312872606251-OFFICE TEA,Direct Expense
+50200068155719,HDFC Bank,8664.22,2023-05-08,70.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-312878889637-OFFICETEA,Direct Expense
+50200068155719,HDFC Bank,8577.22,2023-05-08,87.0,debit,UPI-GROFERS INDIA PVT LT-GROFERS.PAYU@HDANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Direct Expense
+50200068155719,HDFC Bank,6577.22,2023-05-09,2000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABAD,Cash Expense
+50200068155719,HDFC Bank,6098.22,2023-05-09,479.0,debit,UPI-KRAPASHANKAR DWIVEDI-9998489366@IBL-UTIB0000003-312906344162-KHUSHI CAKE,Direct Expense
+50200068155719,HDFC Bank,5908.22,2023-05-10,190.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-313032996050-OFFICECHAI,Direct Expense
+50200068155719,HDFC Bank,5838.22,2023-05-11,70.0,debit,UPI-RANDERIYA PRINCE-8140404194@YBL-KKBK0002572-313156890647-SKY FABRIC,Direct Expense
+50200068155719,HDFC Bank,5683.22,2023-05-11,155.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-313159732721-OFFICECHAI,Direct Expense
+50200068155719,HDFC Bank,5633.22,2023-05-11,50.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-313160415686-OFFICE CLEANING,Direct Expense
+50200068155719,HDFC Bank,5393.22,2023-05-12,240.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-313285219224-CHAI OFFICE,Direct Expense
+50200068155719,HDFC Bank,4893.22,2023-05-12,500.0,debit,UPI-PRAGYA NAVRATAN CHHA-CPRAGYA22@OKICICI-ICIC0001837-313286759601-OFFICE SAAFSAFAI,Direct Expense
+50200068155719,HDFC Bank,2958.22,2023-05-13,1935.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-313311764895-SABA GARMENTS,Direct Expense
+50200068155719,HDFC Bank,2878.22,2023-05-13,80.0,debit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086@OKICICI-SBIN0031507-313311819643-SABA,Direct Expense
+50200068155719,HDFC Bank,5378.22,2023-05-18,2500.0,credit,UPI-MAHESH KANTIBHAI TAB-MAHESHTABIYAD04ANK LIMITEDALANCE INCLUDES FUNDS EARMARKED FOR HOLD AND UNCLEARED FUNDS,Revenue UPI
+50200068155719,HDFC Bank,4317.22,2023-05-18,1061.0,debit,UPI-YASHWANTKALAL-MADHUJUNWALIYA@OKSBI-SBIN0031967-313835171696-SULAY CAKE,Direct Expense
+50200068155719,HDFC Bank,3622.22,2023-05-18,695.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-313842274089-OFFICETEA,Direct Expense
+50200068155719,HDFC Bank,5512.22,2023-05-18,1890.0,credit,UPI-RAMESH KUMARMEENA-RAMESHKUMARMEENA086-1@OKSBI-HDFC0000006-313852154814-VTRANS RETURNS,Revenue UPI
+50200068155719,HDFC Bank,5247.22,2023-05-19,265.0,debit,UPI-BHAGWATI LAL MEENA-BHAGAWTILALBARGOTB@OKSBI-SBIN0031229-313968771977-TEA,Direct Expense
+50200068155719,HDFC Bank,4461.22,2023-05-19,786.0,debit,UPI-BLINKIT-PAYTM-70258461@PAYTM-PYTM0123456-313969615942-BLINKIT PAYMENT,Direct Expense
+50200068155719,HDFC Bank,4735.22,2023-05-19,274.0,credit,UPI-BLINKIT-PAYTM-70258461@PAYTM-PYTM0123456-350528702705-EXPRESS,Revenue PG Non split
+50200068155719,HDFC Bank,1735.22,2023-05-19,3000.0,debit,ATW-403875XXXXXX3072-S1ANBA90-AHMEDABADSTATEMENT SUMMARY :-,Cash Expense

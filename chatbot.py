@@ -95,6 +95,10 @@ def send_click():
         st.session_state.responses.append(response)
         st.session_state.user = ""
 
+def file_change():
+    st.session_state.file_upload_change = True
+    st.session_state.parsed = ""
+
 @st.cache_data
 def convert_df(df):
      # IMPORTANT: Cache the conversion to prevent computation on every rerun
@@ -107,7 +111,7 @@ if 'responses' not in st.session_state:
     st.session_state.responses = ["Hello there, this is a Bank Statement Analysis chatbot! You can ask me any queries related to the uploaded bank statement, I will try my best to answer all your queries. How can i help you?"]
 
 st.title(':blue[Bank Statement Analysis Chatbot] 📊')
-uploaded_file = st.file_uploader("Choose a pdf file", type='pdf')
+uploaded_file = st.file_uploader("Choose a pdf file", type='pdf', on_change=file_change)
 
 if "chat_btn_active" not in st.session_state:
     st.session_state.chat_btn_active = False
@@ -115,13 +119,16 @@ if "chat_btn_active" not in st.session_state:
 if "parsed" not in st.session_state:
     st.session_state.parsed = ""
 
+if "file_upload_change" not in st.session_state:
+    st.session_state.file_upload_change = False
+
 if uploaded_file is not None:
 
     pdf_data = uploaded_file.read()
     with open(uploaded_file.name, 'wb') as f: 
         f.write(pdf_data)
 
-    if st.session_state.parsed == "":
+    if st.session_state.parsed == "" and st.session_state.file_upload_change == True:
         parser_bank_name = get_bankname(uploaded_file.name)
         print("Bank name: ", parser_bank_name)
         parse_df = pd.DataFrame()
@@ -136,6 +143,7 @@ if uploaded_file is not None:
             print("HDFC: ", parse_df.shape)
         else:
             pass
+        st.session_state.file_upload_change = False
 
         print("DF: ", parse_df.shape)
         st.session_state.parsed = bank_classifier_predict(parse_df)
@@ -162,7 +170,7 @@ if uploaded_file is not None:
             # st.button("Generate Overall Report", on_click="") 
             chat_btn = st.button("Let's Chat!")
             
-        if st.session_state.prompts and chat_btn or st.session_state.chat_btn_active:
+        if st.session_state.prompts and (chat_btn or st.session_state.chat_btn_active == True):
             for i in range(len(st.session_state.responses)):
                 if i == 0:
                     message(st.session_state.responses[i], key=str(i), seed='Milo')
@@ -200,22 +208,43 @@ if uploaded_file is not None:
                         message(st.session_state.responses[i], key=str(i), seed='Milo')
                     elif validateJSON(st.session_state.responses[i]) == True:
                         result = json.loads(st.session_state.responses[i])
+                        print("bar result: ", result)
                         if result.get("bar"):
                             try:
+                                if type(result["bar"]["x"]) == str:
+                                    print("X str")
+                                    result["bar"]["x"] = json.loads(result["bar"]["x"])
+                                if type(result["bar"]["y"]) == str:
+                                    print("Y str")
+                                    result["bar"]["y"] = json.loads(result["bar"]["y"])
                                 plot_df = pd.DataFrame(result["bar"])
                                 message("The bar chart is plotted,", key=str(i), seed='Milo')
                                 st.bar_chart(plot_df, x="x", y="y")
                             except Exception as e:
                                 message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
                         if result.get("line"):
+                            print("line result: ", result)
                             try:
+                                if type(result["line"]["x"]) == str:
+                                    print("X str")
+                                    result["line"]["x"] = json.loads(result["line"]["x"])
+                                if type(result["line"]["y"]) == str:
+                                    print("Y str")
+                                    result["line"]["y"] = json.loads(result["line"]["y"])
                                 plot_df = pd.DataFrame(result["line"])
                                 message("The line graph is plotted,", key=str(i), seed='Milo')
                                 st.line_chart(plot_df, x="x", y="y")
                             except Exception as e:
                                 message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
                         if result.get("pie"):
+                            print("pie result: ", result)
                             try:
+                                if type(result["pie"]["x"]) == str:
+                                    print("X str")
+                                    result["pie"]["x"] = json.loads(result["pie"]["x"])
+                                if type(result["pie"]["y"]) == str:
+                                    print("Y str")
+                                    result["pie"]["y"] = json.loads(result["pie"]["y"])
                                 plot_df = pd.DataFrame(result["pie"])
                                 message("The pie chart is plotted,", key=str(i), seed='Milo')
                                 fig, ax = plt.subplots(figsize=(5, 5))
@@ -245,36 +274,36 @@ if uploaded_file is not None:
                             message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
 
                     if top_debit_high_condn:
-                        top_df = df.loc[df["transactionValue"] < 0]
+                        top_df = df.loc[df["transactionType"] == "debit"]
                         top_df["transactionValue"] = abs(top_df["transactionValue"])
                         st.dataframe(top_df.nlargest(5, ['transactionValue']))
                     if top_credit_high_condn:
-                        st.dataframe(df.loc[df["transactionValue"] > 0].nlargest(5, ['transactionValue']))
+                        st.dataframe(df.loc[df["transactionType"] == "credit"].nlargest(5, ['transactionValue']))
                     if top_high_condn:
                         top_df = df.copy()
                         top_df["transactionValue"] = abs(top_df["transactionValue"])
                         st.dataframe(top_df.nlargest(5, ['transactionValue']))
                     if top_credit_condn:
-                        st.dataframe(df.loc[df["transactionValue"] > 0].head())
+                        st.dataframe(df.loc[df["transactionType"] == "credit"].head())
                     if top_debit_condn:
-                        st.dataframe(df.loc[df["transactionValue"] < 0].head())
+                        st.dataframe(df.loc[df["transactionType"] == "debit"].head())
                     if top_condn:
                         st.dataframe(df.head())
 
                     if low_debit_condn:
-                        top_df = df.loc[df["transactionValue"] < 0]
+                        top_df = df.loc[df["transactionType"] == "debit"]
                         top_df["transactionValue"] = abs(top_df["transactionValue"])
                         st.dataframe(top_df.nsmallest(5, ['transactionValue']))
                     if low_credit_condn:
-                        st.dataframe(df.loc[df["transactionValue"] > 0].nsmallest(5, ['transactionValue']))
+                        st.dataframe(df.loc[df["transactionType"] == "credit"].nsmallest(5, ['transactionValue']))
                     if low_condn:
                         top_df = df.copy()
                         top_df["transactionValue"] = abs(top_df["transactionValue"])
                         st.dataframe(top_df.nsmallest(5, ['transactionValue']))
                     if bottom_debit_condn:
-                        st.dataframe(df.loc[df["transactionValue"] < 0].tail())
+                        st.dataframe(df.loc[df["transactionType"] == "debit"].tail())
                     if bottom_credit_condn:
-                        st.dataframe(df.loc[df["transactionValue"] > 0].tail())
+                        st.dataframe(df.loc[df["transactionType"] == "credit"].tail())
                     if bottom_condn:
                         st.dataframe(df.tail())     
 

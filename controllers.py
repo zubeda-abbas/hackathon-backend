@@ -70,20 +70,21 @@ def get_bankname(file_path):
     return name
 
 def sonata(y):
-        x = date_parser.parse(y,dayfirst=True)
+        x=date_parser.parse(y,dayfirst=True)
         return x
+
 
 def getnumber(text):
     isNegative = False
 
-    if isinstance(text, int) == True or isinstance(text, float) == True:
-        result = float(text)
+    if isinstance(text, int)==True or isinstance(text, float)==True:
+        result=float(text)
     else:
-        getVals = []
+        getVals=[]
         for val in text:
             if "-" in text:
                 isNegative = True
-            if val.isnumeric() == True or val==".":
+            if val.isnumeric()==True or val==".":
                 getVals.append(val)
         result = "".join(getVals)
         result=float(result)
@@ -92,7 +93,8 @@ def getnumber(text):
     return result
 
 def get_account_number(text):
-    listbyline = text.split('\n')
+
+    listbyline=text.split('\n')
     accountNumber = ''
     for x in listbyline:
         if re.search(r"Account No : ", x):
@@ -102,7 +104,7 @@ def get_account_number(text):
     return accountNumber
 
 
-def getcoord(path, tol_diff):
+def getcoord(path,tol_diff):
     fp = open(path, 'rb')
     # Create a PDF parser object associated with the file object.
     parser = PDFParser(fp)
@@ -122,7 +124,7 @@ def getcoord(path, tol_diff):
     device = PDFPageAggregator(rsrcmgr, laparams=laparams)
     # Create a PDF interpreter object.
     interpreter = PDFPageInterpreter(rsrcmgr, device)
-    output = []
+    output=[]
     def parse_obj(lt_objs):
         # loop over the object list
         for obj in lt_objs:
@@ -142,117 +144,121 @@ def getcoord(path, tol_diff):
         # extract text from this object
         parse_obj(layout._objs)
 
-    x0 = 0
-    x1 = 0
-    x2 = 0
-    x3 = 0
-    x4 = 0
-    x5 = 0
-    x6 = 0
-    x7 = 0
+    x0=0
+    x1=0
+    x2=0
+    x3=0
+    x4=0
+    x5=0
+    x6=0
+    x7=0
     # print(output)
 
     for i in output:
-        if i != None:
+        if i!=None:
             if 'Date_' == i[4]:
-                x0 = i[0] + tol_diff + 10
+                x0=i[0] + tol_diff + 10
             if 'Narration_' == i[4]:
-                x1 = i[0] + tol_diff + 110
+                x1=i[0] + tol_diff + 110
             if 'Chq./Ref.No._' == i[4]:
-                x2 = i[2] + tol_diff + 50
+                x2=i[2] + tol_diff + 50
             if "Value Dt Withdrawal Amt._" == i[4]:
-                x3 = i[2] + tol_diff
+                x3=i[2] + tol_diff
             if "Deposit Amt._" == i[4]:
-                x4 = i[2] + tol_diff
+                x4=i[2] + tol_diff
             if "Closing Balance_" == i[4]:
-                x5 = i[2] + tol_diff
+                x5=i[2] + tol_diff
 
-    print([x0, x1, x2, x3, x4, x5])
+    print([x0,x1,x2,x3,x4,x5])
 
-    return [x0, x1, x2, x3, x4, x5]
+    return [x0,x1,x2,x3,x4,x5]
 
 def parse_hdfc(path):
-    print("File name: ", path)
-    tolerance = 10
-    columns = getcoord(path,tolerance)
+
+    tolerance=10
+    columns=getcoord(path,tolerance)
 
     
     pdf = PyPDF2.PdfReader(open(path,'rb'))
     # pdf.decrypt(b'CONS866823038')
-    pages = len(pdf.pages)
+    pages=len(pdf.pages)
 
     text = pdf.pages[0].extract_text()
 
 
-    a_num = get_account_number(text)
-    arr = []
+    a_num=get_account_number(text)
+    arr= []
     for p in range(1,pages+1):
 
-        x = tabula.read_pdf(path,guess=False, stream=False, columns=columns, pages=p, multiple_tables=True, pandas_options={'header':None})
+        x=tabula.read_pdf(path,guess=False,stream=False,columns=columns,pages=p,multiple_tables=True,pandas_options={'header':None})
 
         for i in x:
-            i = i.fillna(0)
+            i=i.fillna(0)
 
             # with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
             #     print(i)
             # print(i)
             for j in range(0,len(i)):
-                    flag = 0
+                    flag=0
 
                     try:
                         sonata(i[0][j])
-                        total = i[5][j]
+                        total=i[5][j]
 
-                        flag = 1
+                        flag=1
 
-                        if total == 0:
-                            flag = 0
+                        if total==0:
+                            flag=0
 
                     except Exception: pass
 
 
-                    if flag != 0:
+                    if flag!=0:
 
-                        date = sonata(i[0][j])
+                        date=sonata(i[0][j])
                         # print(date)
 
-                        transaction_value = 0
+                        transaction_value=0
 
-                        transaction_type = ""
+                        transaction_type=""
 
                         # print(i[4][j])
                         # print(type (i[4][j]))
 
-                        if getnumber(i[3][j]) > 0 and getnumber(i[4][j]) == 0:
-                            transaction_type = "debit"
+                        if getnumber(i[3][j])>0 and getnumber(i[4][j]) == 0:
+                            transaction_value=getnumber(i[3][j])
+                            transaction_type="debit"
 
-                        if getnumber(i[4][j]) > 0 and getnumber(i[3][j]) == 0:
-                            transaction_type = "credit"
+                        if getnumber(i[4][j])>0 and getnumber(i[3][j]) == 0:
+                            transaction_value=getnumber(i[4][j])
+                            transaction_type="credit"
 
 
                         desc = i[1][j]
                         for k in range(1,4):
                             try:
-                                val_1 = float(i[3][j+k])+float(i[4][j+k])+float(i[5][j+k])
-                                if val_1 == 0:
-                                    desc = desc + i[1][j+k]
+                                val_1=float(i[3][j+k])+float(i[4][j+k])+float(i[5][j+k])
+                                if val_1==0:
+                                    desc=desc + i[1][j+k]
                             except Exception: break
 
-                        balance = getnumber(i[5][j])
+                        balance=getnumber(i[5][j])
 
-                        final_res = {
+                        final_res={
                             "accountNumber": a_num,
                             "bankName": "HDFC Bank",
-                            "balance": balance,
+                            "balance": float(balance),
                             "date": date,
-                            "transactionValue":transaction_value,
+                            "transactionValue":float(transaction_value),
                             "transactionType": transaction_type,
                             "description": desc.upper()
                           }
                         
                         arr.append(final_res)
 
+    print(arr)
     df = pd.DataFrame(arr)
+    print(df.info())
     return df
 
 def parse_sbi(filename):
@@ -314,6 +320,7 @@ def parse_sbi(filename):
     df_big.drop(['Debit','Credit'], axis=1, inplace=True) #unwanted column removed
     df_big = df_big.set_axis(['date','description', 'balance', 'transactionValue', 'transactionType'], axis=1)
     df_big['bankName'] = 'SBI Bank'
+    print(df_big.info())
     return df_big
 
 
@@ -356,6 +363,7 @@ def parse_axis(filename):
         
     df_big = df_big.set_axis(['date', 'description', 'balance', 'transactionValue', 'transactionType'], axis=1)
     df_big['bankName'] = 'Axis Bank'
+    print(df_big.info())
     
     return df_big
     
@@ -370,52 +378,52 @@ def preprocess_text(sentence):
     return " ".join(filtered_words)  # Join the filtered tokens
 
 def postprocess(df_new):
-    df_new.loc[(df_new["category"] == "Direct Expense") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Transfer-in/Revenue-other") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Adjustment/reversal") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Agency/Vendor Expense") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Bank charges") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Cash/cheque deposit") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Investment-New") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Investment/FD deposit") & (df_new["transactionValue"] > 0), "category"] = "Investment/FD redeem"
-    df_new.loc[(df_new["category"] == "Investment/FD redeem") & (df_new["transactionValue"] < 0), "category"] = "Investment/FD deposit"
-    df_new.loc[(df_new["category"] == "Loan repayment") & (df_new["transactionValue"] > 0), "category"] = "Loan-in"
-    df_new.loc[(df_new["category"] == "Loan-in") & (df_new["transactionValue"] < 0), "category"] = "Loan repayment"
-    df_new.loc[(df_new["category"] == "Outward bounce") & (df_new["transactionValue"] > 0), "category"] = "Inward bounce"
-    df_new.loc[(df_new["category"] == "Inward bounce") & (df_new["transactionValue"] < 0), "category"] = "Outward bounce"
-    df_new.loc[(df_new["category"] == "Rental expense") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Revenue-PG-Lender-Escrow") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Revenue-PG-Non-split") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Revenue-UPI") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Salary/Emp/Consultant") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Tax") & (df_new["transactionValue"] > 0), "category"] = "Tax/other-credit"
-    df_new.loc[(df_new["category"] == "Tax/other-credit") & (df_new["transactionValue"] < 0), "category"] = "Tax"
-    df_new.loc[(df_new["category"] == "Utilities/Bill") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Cash Expense") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "OD/CC Repayment") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Interest income") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Deposit-credit") & (df_new["transactionValue"] < 0), "category"] = "Deposit-debit"
-    df_new.loc[(df_new["category"] == "Deposit-debit") & (df_new["transactionValue"] > 0), "category"] = "Deposit-credit"
-    df_new.loc[(df_new["category"] == "Revenue-POS") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Revenue-PG-split") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Revenue-COD") & (df_new["transactionValue"] < 0) & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False)), "category"] = "Saas/Tech"
-    df_new.loc[(df_new["category"] == "Revenue-COD") & (df_new["transactionValue"] < 0) & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False) == False), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Marketing") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Revenue-Mktplace"
-    df_new.loc[(df_new["category"] == "Marketing") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False) == False), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Saas/Tech") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Revenue-Mktplace"
-    df_new.loc[(df_new["category"] == "Saas/Tech") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False)), "category"] = "Revenue-COD"
-    df_new.loc[(df_new["category"] == "Saas/Tech") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False) == False) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ") == False), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Revenue-Mktplace") & (df_new["transactionValue"] < 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False) == False), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Revenue-Mktplace") & (df_new["transactionValue"] < 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Marketing"
-    df_new.loc[(df_new["category"] == "Revenue-Mktplace") & (df_new["transactionValue"] < 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZONSE", case=False)), "category"] = "Saas/Tech"
-    df_new.loc[(df_new["category"] == "Revenue-Mktplace") & (df_new["transactionValue"] < 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Marketing"
-    df_new.loc[(df_new["category"] == "Refund") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Revenue-Mktplace"
-    df_new.loc[(df_new["category"] == "Refund") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False) == False), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Nach payment") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("RAZ", case=False)), "category"] = "Revenue-PG-split"
-    df_new.loc[(df_new["category"] == "Nach payment") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("LOAN|INCRED|BAJAJ", regex=True, case=False)), "category"] = "Loan-in"
-    df_new.loc[(df_new["category"] == "Nach payment") & (df_new["transactionValue"] > 0) & (df_new["description"].str.strip().str.upper().str.contains("LOAN|INCRED|BAJAJ|RAZ", regex=True, case=False) == False), "category"] = "Transfer-in/Revenue-other"
-    df_new.loc[(df_new["category"] == "Revenue-Escrow") & (df_new["transactionValue"] < 0), "category"] = "Direct Expense"
-    df_new.loc[(df_new["category"] == "Trading/Investment") & (df_new["transactionValue"] > 0), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Direct Expense") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Transfer-in/Revenue-other") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Adjustment/reversal") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Agency/Vendor Expense") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Bank charges") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Cash/cheque deposit") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Investment New") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Investment/FD deposit") & (df_new["transactionType"] == "credit"), "category"] = "Investment/FD redeem"
+    df_new.loc[(df_new["category"] == "Investment/FD redeem") & (df_new["transactionType"] == "debit"), "category"] = "Investment/FD deposit"
+    df_new.loc[(df_new["category"] == "Loan repayment") & (df_new["transactionType"] == "credit"), "category"] = "Loan-in"
+    df_new.loc[(df_new["category"] == "Loan-in") & (df_new["transactionType"] == "debit"), "category"] = "Loan repayment"
+    df_new.loc[(df_new["category"] == "Outward bounce") & (df_new["transactionType"] == "credit"), "category"] = "Inward bounce"
+    df_new.loc[(df_new["category"] == "Inward bounce") & (df_new["transactionType"] == "debit"), "category"] = "Outward bounce"
+    df_new.loc[(df_new["category"] == "Rental expense") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Revenue PG Lender Escrow") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Revenue PG Non split") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Revenue UPI") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Salary/Emp/Consultant") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Tax") & (df_new["transactionType"] == "credit"), "category"] = "Tax/other-credit"
+    df_new.loc[(df_new["category"] == "Tax/other-credit") & (df_new["transactionType"] == "debit"), "category"] = "Tax"
+    df_new.loc[(df_new["category"] == "Utilities/Bill") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Cash Expense") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "OD/CC Repayment") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Interest income") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Deposit credit") & (df_new["transactionType"] == "debit"), "category"] = "Deposit debit"
+    df_new.loc[(df_new["category"] == "Deposit debit") & (df_new["transactionType"] == "credit"), "category"] = "Deposit credit"
+    df_new.loc[(df_new["category"] == "Revenue POS") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Revenue PG split") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Revenue COD") & (df_new["transactionType"] == "debit") & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False)), "category"] = "Saas/Tech"
+    df_new.loc[(df_new["category"] == "Revenue COD") & (df_new["transactionType"] == "debit") & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False) == False), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Marketing") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Revenue Marketplace"
+    df_new.loc[(df_new["category"] == "Marketing") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False) == False), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Saas/Tech") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Revenue Marketplace"
+    df_new.loc[(df_new["category"] == "Saas/Tech") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False)), "category"] = "Revenue COD"
+    df_new.loc[(df_new["category"] == "Saas/Tech") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("DELHIV", case=False) == False) & (df_new["description"].str.strip().str.upper().str.contains("AMAZ") == False), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Revenue Marketplace") & (df_new["transactionType"] == "debit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False) == False), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Revenue Marketplace") & (df_new["transactionType"] == "debit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Marketing"
+    df_new.loc[(df_new["category"] == "Revenue Marketplace") & (df_new["transactionType"] == "debit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZONSE", case=False)), "category"] = "Saas/Tech"
+    df_new.loc[(df_new["category"] == "Revenue Marketplace") & (df_new["transactionType"] == "debit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Marketing"
+    df_new.loc[(df_new["category"] == "Refund") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False)), "category"] = "Revenue Marketplace"
+    df_new.loc[(df_new["category"] == "Refund") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("AMAZ", case=False) == False), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Nach payment") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("RAZ", case=False)), "category"] = "Revenue PG split"
+    df_new.loc[(df_new["category"] == "Nach payment") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("LOAN|INCRED|BAJAJ", regex=True, case=False)), "category"] = "Loan-in"
+    df_new.loc[(df_new["category"] == "Nach payment") & (df_new["transactionType"] == "credit") & (df_new["description"].str.strip().str.upper().str.contains("LOAN|INCRED|BAJAJ|RAZ", regex=True, case=False) == False), "category"] = "Transfer-in/Revenue-other"
+    df_new.loc[(df_new["category"] == "Revenue Escrow") & (df_new["transactionType"] == "debit"), "category"] = "Direct Expense"
+    df_new.loc[(df_new["category"] == "Trading/Investment") & (df_new["transactionType"] == "credit"), "category"] = "Transfer-in/Revenue-other"
     
     return df_new
 
@@ -431,20 +439,19 @@ def bank_classifier_predict(df):
 
     print("Running classifier predict...")
 
-    cat_dict = {0: 'Cash/cheque deposit', 1: 'Outward bounce', 2: 'Transfer-in/Revenue-other', 3: 'Revenue-UPI', 4: 
-        'Direct Expense', 5: 'Bank charges', 6: 'Tax', 7: 'Revenue-COD', 8: 'Trading/Investment', 
-        9: 'Revenue-PG-Non-split', 10: 'Marketing', 11: 'Utilities/Bill', 12: 'Revenue-PG-split', 
+    cat_dict = {0: 'Cash/cheque deposit', 1: 'Outward bounce', 2: 'Transfer-in/Revenue-other', 3: 'Revenue UPI', 4: 
+        'Direct Expense', 5: 'Bank charges', 6: 'Tax', 7: 'Revenue COD', 8: 'Trading/Investment', 
+        9: 'Revenue PG Non split', 10: 'Marketing', 11: 'Utilities/Bill', 12: 'Revenue PG split', 
         13: 'Salary/Emp/Consultant', 14: 'Rental expense', 15: 'Saas/Tech', 16: 'Cash Expense', 
-        17: 'Revenue-Mktplace', 18: 'Refund', 19: 'Investment-New', 20: 'Adjustment/reversal', 
+        17: 'Revenue Marketplace', 18: 'Refund', 19: 'Investment New', 20: 'Adjustment/reversal', 
         21: 'Inward bounce', 22: 'Loan-in', 23: 'Agency/Vendor Expense', 24: 'Investment/FD redeem', 
         25: 'Nach payment', 26: 'OD/CC Repayment', 27: 'Interest income', 28: 'Investment/FD deposit', 
-        29: 'Revenue-Escrow', 30: 'Revenue-PG-Lender-Escrow', 31: 'Loan repayment', 32: 'Tax/other-credit', 
-        33: 'Deposit-debit', 34: 'Deposit-credit', 35: 'Revenue-POS'}
+        29: 'Revenue Escrow', 30: 'Revenue PG Lender Escrow', 31: 'Loan repayment', 32: 'Tax/other-credit', 
+        33: 'Deposit debit', 34: 'Deposit credit', 35: 'Revenue POS'}
 
     if df.shape[0] > 0:
-        df_new = df.copy()
+        df_new = df.dropna()
         df_new["description"] = df_new["description"].astype('string')
-        print("DF: ", df_new)
         print("Info: ", df_new.info())
 
         df_clean = df_new.copy()
