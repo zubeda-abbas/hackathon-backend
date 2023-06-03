@@ -5,7 +5,7 @@ seaborn==0.12.2
 Flask==2.0.1
 Flask-PyMongo==2.3.0
 pymongo==3.11.4
-python-dateutil==2.8.1
+tabulate==0.9.0
 python-dotenv==0.17.1
 pytz==2021.1
 requests==2.25.1
@@ -16,3 +16,7 @@ streamlit-chat==0.0.2.2
 gradio==3.32.0
 six==1.16.0
 urllib3==1.26.5
+tensorflow
+transformers==4.28.1
+nltk==3.8.1
+boto3==1.24.27
