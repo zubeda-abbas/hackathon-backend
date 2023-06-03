@@ -20,3 +20,6 @@ tensorflow
 transformers==4.28.1
 nltk==3.8.1
 boto3==1.24.27
+PyPDF2==3.0.1
+tabula-py==2.7.0
+pdfminer
