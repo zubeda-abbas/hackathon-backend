@@ -261,6 +261,95 @@ def parse_hdfc(path):
     print(df.info())
     return df
 
+def parse_icici(path):
+    print("File name: ", path)
+    tolerance=10
+    columns=getcoord(path,tolerance)
+
+    
+    pdf = PyPDF2.PdfReader(open(path,'rb'))
+    # pdf.decrypt(b'CONS866823038')
+    pages=len(pdf.pages)
+
+    text = pdf.pages[0].extract_text()
+
+
+    a_num=get_account_number(text)
+    arr= []
+    for p in range(1,pages+1):
+
+        x=tabula.read_pdf(path,guess=False,stream=False,columns=columns,pages=p,multiple_tables=True,pandas_options={'header':None})
+
+        for i in x:
+            i=i.fillna(0)
+
+            # with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+            #     print(i)
+    #         # print(i)
+            for j in range(0,len(i)):
+                    flag=0
+
+                    try:
+                        sonata(i[1][j])
+                        total=i[8][j]
+
+                        flag=1
+
+                        if total==0:
+                            flag=0
+
+                    except Exception: pass
+
+
+                    if flag!=0:
+
+                        date=sonata(i[1][j])
+                        # print(date)
+
+                        transaction_value=0
+
+                        transaction_type=""
+
+                        # print(i[4][j])
+                        # print(type (i[4][j]))
+
+                        if getnumber(i[6][j])>0 and getnumber(i[7][j])==0:
+                            transaction_value=getnumber(i[6][j])
+                            transaction_type="debit"
+
+                        if getnumber(i[7][j])>0 and getnumber(i[6][j])==0:
+                            transaction_value=getnumber(i[7][j])
+                            transaction_type="credit"
+
+
+                        desc = str(i[3][j]) + str(i[4][j])
+                        for k in range(1,7):
+                            try:
+                                val_1=float(i[6][j+k])+float(i[7][j+k])
+                                if val_1==0:
+                                    desc=desc + str(i[3][j+k]) + str(i[4][j+k])
+                            except Exception: break
+
+                        balance=getnumber(i[8][j]) + getnumber(i[8][j+1])
+
+                        final_res={
+                            "accountNumber": a_num,
+                            "bankName": "ICICI Bank",
+                            "balance": float(balance),
+                            "date": date,
+                            "transactionValue":float(transaction_value),
+                            "transactionType": transaction_type,
+                            "description": desc.upper()
+                          }
+                        
+                        print(final_res)
+                        arr.append(final_res)
+
+    df = pd.DataFrame(arr)
+    df.dropna(inplace=True)
+    print(df.info())
+    return df
+
 def parse_sbi(filename):
     print("File name: ", filename)
     df = read_pdf(filename,pages="all") #address of pdf file
@@ -304,6 +393,7 @@ def parse_sbi(filename):
 
     df_big.set_index(pd.Index(new_ind),inplace=True) #set new index for df
     df_big.drop(remo_column, axis=1, inplace=True) #unwanted column removed
+    print("Columns: ", df_big.columns)
     df_big.drop(['Txn Date','Ref No./Cheque','Branch'], axis=1, inplace=True) #unwanted column removed
     df_big['transactionValue']=0
     df_big['transactionType']=''
@@ -322,12 +412,14 @@ def parse_sbi(filename):
     df_big['date'] = pd.to_datetime(df_big['date'],dayfirst=True, format='%d/%m/%Y')
     df_big['transactionValue'] = df_big['transactionValue'].str.replace(',','').astype(float)
     df_big['balance'] = df_big['balance'].str.replace(',','').astype(float)
+
+    print(df_big.info())
     return df_big
 
 def parse_axis(filename):
     
-    print("File name: ", filename)
-    df = read_pdf(filename, pages="all") #address of pdf file
+    print("file name",filename)
+    df = read_pdf(filename,pages="all") #address of pdf file
     # set columns to all df  till second last page
     for page in range(len(df)-2):
         df[page] = df[page].set_axis(df[0].columns, axis=1)
@@ -344,25 +436,39 @@ def parse_axis(filename):
 
     df_big = pd.concat(df[0:-2])  #make single df from list of df
     
-    new_ind = []
-    inc = 0
+    new_ind=[]
+    inc=0
     for x in range(len(df)-2):
 
         for i in df[x].index:
             new_ind.append(inc)
-            inc += 1
+            inc+=1
             
-    df_big.set_index(pd.Index(new_ind),inplace=True) #set new index for df        
+    df_big = df_big.set_index(pd.Index(new_ind)) #set new index for df        
     
     df_big.drop(['Chq No','Branch Name','Chq No','Value Date'], axis=1, inplace=True) #unwanted column removed
     df_big["Transaction Type"] = ""
     df_big.loc[df_big["DR/CR"] == 'DR', "Transaction Type"] = "debit"
     df_big.loc[df_big["DR/CR"] == 'CR', "Transaction Type"] = "credit"
 
-    df_big.drop('DR/CR', axis=1, inplace=True)
+    df_big.drop('DR/CR',axis=1, inplace=True)
         
-    df_big = df_big.set_axis(['date', 'description', 'balance', 'transactionValue', 'transactionType'], axis=1)
-    df_big['bankName'] = 'Axis Bank'
+    df_big = df_big.set_axis(['date','description', 'balance', 'transactionValue', 'transactionType'], axis=1)
+    df_big['bankName']='AXIS Bank'
+    
+    removepoint=0
+    for x in df_big.index:
+#         print(df_big.loc[x][0])
+        if(df_big.loc[x][0]=='Sr. No.'):
+            removepoint=x
+            break
+    
+    df_big=df_big.loc[0:removepoint-1]
+    
+    df_big['date']=pd.to_datetime(df_big['date'],dayfirst=True, format='%d-%m-%Y')
+    df_big['transactionValue'] = df_big['transactionValue'].astype(float)
+    df_big['balance'] = df_big['balance'].astype(float)
+#     df_big['date']=pd.to_datetime(df_big['date'],dayfirst=True)
     print(df_big.info())
     
     return df_big
