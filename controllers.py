@@ -174,7 +174,7 @@ def getcoord(path,tol_diff):
     return [x0,x1,x2,x3,x4,x5]
 
 def parse_hdfc(path):
-
+    print("File name: ", path)
     tolerance=10
     columns=getcoord(path,tolerance)
 
@@ -256,30 +256,29 @@ def parse_hdfc(path):
                         
                         arr.append(final_res)
 
-    print(arr)
+    # print(arr)
     df = pd.DataFrame(arr)
     print(df.info())
     return df
 
 def parse_sbi(filename):
-    file = "SBI.pdf"
     print("File name: ", filename)
     df = read_pdf(filename,pages="all") #address of pdf file
     for page in range(len(df)):
-        descrip = ''
-        loc_to_update = 0; #inital location to update;
+        descrip=''
+        loc_to_update=0; #inital location to update;
         for row in range(len(df[page])):
-            if(str(df[page].loc[row][0]) == 'nan'):
-                if(str(df[page].loc[row][2]) != 'nan'):
+            if(str(df[page].loc[row][0])=='nan'):
+                if(str(df[page].loc[row][2])!='nan'):
                     descrip+=str(df[page].loc[row][2])
             else:
         #         this block is for updating value
         #         loc_to_update
-                df[page].loc[loc_to_update][2] = descrip
-                loc_to_update = row
+                df[page].loc[loc_to_update][2]=descrip
+                loc_to_update=row
                 descrip=str(df[page].loc[row][2])
             if(row+1 == len(df[page])):
-                df[page].loc[loc_to_update][2] = descrip
+                df[page].loc[loc_to_update][2]=descrip
           
     #    
     for pg in range(len(df)):
@@ -291,38 +290,39 @@ def parse_sbi(filename):
         df[p].fillna(0, inplace = True)    
 
     df_big = pd.concat(df)  #make single df from list of df 
-    remo_column = []
+    remo_column=[]
     for col in df_big.columns:
         if 'Unnamed' in col:
             remo_column.append(col)
 
-    new_ind = []
-    inc = 0
+    new_ind=[]
+    inc=0
     for x in range(len(df)):
         for i in df[x].index:
             new_ind.append(inc)
-            inc += 1
+            inc+=1
 
-    df_big.set_index(pd.Index(new_ind), inplace=True) #set new index for df
+    df_big.set_index(pd.Index(new_ind),inplace=True) #set new index for df
     df_big.drop(remo_column, axis=1, inplace=True) #unwanted column removed
     df_big.drop(['Txn Date','Ref No./Cheque','Branch'], axis=1, inplace=True) #unwanted column removed
-    df_big['transactionValue'] = 0
-    df_big['transactionType'] = ''
+    df_big['transactionValue']=0
+    df_big['transactionType']=''
     # add two column tansaction type and value
     for x in df_big.index:
         if(df_big.loc[x,'Debit']==0):
-            df_big.loc[x, "transactionValue"] = df_big.loc[x,'Credit']
+            df_big.loc[x, "transactionValue"] =df_big.loc[x,'Credit']
             df_big.loc[x, "transactionType"] ='credit'
         else:    
-            df_big.loc[x, "transactionValue"] = df_big.loc[x,'Debit']
+            df_big.loc[x, "transactionValue"] =df_big.loc[x,'Debit']
             df_big.loc[x, "transactionType"] ='debit'
 
     df_big.drop(['Debit','Credit'], axis=1, inplace=True) #unwanted column removed
     df_big = df_big.set_axis(['date','description', 'balance', 'transactionValue', 'transactionType'], axis=1)
     df_big['bankName'] = 'SBI Bank'
-    print(df_big.info())
+    df_big['date'] = pd.to_datetime(df_big['date'],dayfirst=True, format='%d/%m/%Y')
+    df_big['transactionValue'] = df_big['transactionValue'].str.replace(',','').astype(float)
+    df_big['balance'] = df_big['balance'].str.replace(',','').astype(float)
     return df_big
-
 
 def parse_axis(filename):
     
