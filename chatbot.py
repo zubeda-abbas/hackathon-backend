@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from streamlit_chat import message
 
-from controllers import (validateJSON, get_bankname, parse_sbi, parse_axis, parse_hdfc, parse_icici, bank_classifier_predict)
+from controllers import (validateJSON, get_bankname, parse_sbi, parse_axis, parse_hdfc, parse_icici, parse_idfc, bank_classifier_predict)
 
 load_dotenv()
 
@@ -132,8 +132,11 @@ if uploaded_file is not None:
         parser_bank_name = get_bankname(uploaded_file.name)
         print("Bank name: ", parser_bank_name)
         parse_df = pd.DataFrame()
-        if parser_bank_name == "ICICI Bank":
-            parse_df = parse_sbi(uploaded_file.name)
+        if parser_bank_name == "IDFC Bank":
+            parse_df = parse_idfc(uploaded_file.name)
+            print("IDFC: ", parse_df.shape)
+        elif parser_bank_name == "ICICI Bank":
+            parse_df = parse_icici(uploaded_file.name)
             print("ICICI: ", parse_df.shape)
         elif parser_bank_name == "SBI Bank":
             parse_df = parse_sbi(uploaded_file.name)

@@ -59,7 +59,7 @@ def get_bankname(file_path):
     pageObj = pdfReader.pages[0]
     pagelen = len(pdfReader.pages[0])
     pageData = pageObj.extract_text()
-    bank_name = {'ICIC':'ICICI Bank', 'SBIN':'SBI Bank','HDFC':'HDFC Bank','UTIB':'Axis Bank','INDB':"IndusInd Bank"}
+    bank_name = {'ICIC':'ICICI Bank', 'SBIN':'SBI Bank','HDFC':'HDFC Bank','UTIB':'Axis Bank','IDFB':'IDFC Bank'}
     listbyline = pageData.split('\n')
     name = ''
     for x in listbyline:
@@ -92,18 +92,23 @@ def getnumber(text):
         return result * -1
     return result
 
+# get accountNumber for any bank out 5
 def get_account_number(text):
-
     listbyline=text.split('\n')
-    accountNumber = ''
+    account_no=''
     for x in listbyline:
-        if re.search(r"Account No : ", x):
-            accountNumber = x.split(":")[1].split(" ")[1]
+        if re.search(r"ACCOUNT NO :|A/C No:|Account No : ", x):
+            if " " not in x.split(":")[1]:
+                account_no = x.split(":")[1]
+            else:
+                account_no = x.split(":")[1].split(" ")[1]
+        elif re.search(r"Account Number", x):
+            account_no = x.split(":")[-1].replace("\t", '')
+        elif re.search(r"Account No :", x):
+            account_no = x.split(":")[1].split(" ")[0]
+    return int(account_no)
 
-    print(accountNumber)
-    return accountNumber
-
-
+# HDFC
 def getcoord(path,tol_diff):
     fp = open(path, 'rb')
     # Create a PDF parser object associated with the file object.
@@ -261,10 +266,84 @@ def parse_hdfc(path):
     print(df.info())
     return df
 
+# ICICI
+def getcoord1(path,tol_diff):
+    fp = open(path, 'rb')
+    # Create a PDF parser object associated with the file object.
+    parser = PDFParser(fp)
+    # Create a PDF document object that stores the document structure.
+    # Password for initialization as 2nd parameter
+    # password = ''
+    document = PDFDocument(parser)
+    # Check if the document allows text extraction. If not, abort.
+    # Create a PDF resource manager object that stores shared resources.
+    rsrcmgr = PDFResourceManager()
+    # Create a PDF device object.
+    device = PDFDevice(rsrcmgr)
+    # BEGIN LAYOUT ANALYSIS
+    # Set parameters for analysis.
+    laparams = LAParams()
+    # Create a PDF page aggregator object.
+    device = PDFPageAggregator(rsrcmgr, laparams=laparams)
+    # Create a PDF interpreter object.
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    output=[]
+    def parse_obj(lt_objs):
+        # loop over the object list
+        for obj in lt_objs:
+            # if it's a textbox, print text and location
+            if isinstance(obj, pdfminer.layout.LTTextBoxHorizontal):
+                # print(obj.bbox[0], obj.bbox[1], obj.get_text().replace('\n', '_'))
+                output.append([obj.bbox[0], obj.bbox[1], obj.bbox[2], obj.bbox[3],obj.get_text().replace('\n', '_')])
+            # if it's a container, recurse
+            elif isinstance(obj, pdfminer.layout.LTFigure):
+                parse_obj(obj._objs)
+                output.append(parse_obj(obj._objs))
+    # loop over all pages in the document
+    for page in PDFPage.create_pages(document):
+        # read the page into a layout object
+        interpreter.process_page(page)
+        layout = device.get_result()
+        # extract text from this object
+        parse_obj(layout._objs)
+
+    x0=0
+    x1=0
+    x2=0
+    x3=0
+    x4=0
+    x5=0
+    x6=0
+    x7=0
+    # print(output)
+
+    for i in output:
+        if i!=None:
+            if 'Sl_No_1_' in i[4]:
+                x0=i[0] + tol_diff + 70
+            if 'Transaction_' == i[4]:
+                x1=i[0] + tol_diff
+            if 'Transaction_Posted Date_' in i[4]:
+                x2=i[0] - tol_diff
+                x3=i[2] + tol_diff + 40
+            # if 'Cheque no /_' == i[4]:
+            if 'Remarks_SI/' in i[4]:
+                x4=i[0] + tol_diff + 50
+            if "Withdra_wal (Dr)_" == i[4]:
+                x5=i[0] - tol_diff
+            if "Deposit_" == i[4]:
+                x6=i[0] - tol_diff
+            if "Balance_" == i[4]:
+                x7=i[0] - tol_diff
+
+    print([x0,x1,x2,x3,x4,x5,x6,x7])
+
+    return [x0,x1,x2,x3,x4,x5,x6,x7]
+
 def parse_icici(path):
     print("File name: ", path)
     tolerance=10
-    columns=getcoord(path,tolerance)
+    columns=getcoord1(path,tolerance)
 
     
     pdf = PyPDF2.PdfReader(open(path,'rb'))
@@ -350,6 +429,7 @@ def parse_icici(path):
     print(df.info())
     return df
 
+# SBI 
 def parse_sbi(filename):
     print("File name: ", filename)
     df = read_pdf(filename,pages="all") #address of pdf file
@@ -393,8 +473,7 @@ def parse_sbi(filename):
 
     df_big.set_index(pd.Index(new_ind),inplace=True) #set new index for df
     df_big.drop(remo_column, axis=1, inplace=True) #unwanted column removed
-    print("Columns: ", df_big.columns)
-    df_big.drop(['Txn Date','Ref No./Cheque','Branch'], axis=1, inplace=True) #unwanted column removed
+    # df_big.drop(['Txn Date','Ref No./Cheque','Branch'], axis=1, inplace=True) #unwanted column removed
     df_big['transactionValue']=0
     df_big['transactionType']=''
     # add two column tansaction type and value
@@ -416,6 +495,167 @@ def parse_sbi(filename):
     print(df_big.info())
     return df_big
 
+# IDFC
+def getcoord2(path,tol_diff):
+    fp = open(path, 'rb')
+    # Create a PDF parser object associated with the file object.
+    parser = PDFParser(fp)
+    # Create a PDF document object that stores the document structure.
+    # Password for initialization as 2nd parameter
+    # password = ''
+    document = PDFDocument(parser)
+    # Check if the document allows text extraction. If not, abort.
+    # Create a PDF resource manager object that stores shared resources.
+    rsrcmgr = PDFResourceManager()
+    # Create a PDF device object.
+    device = PDFDevice(rsrcmgr)
+    # BEGIN LAYOUT ANALYSIS
+    # Set parameters for analysis.
+    laparams = LAParams()
+    # Create a PDF page aggregator object.
+    device = PDFPageAggregator(rsrcmgr, laparams=laparams)
+    # Create a PDF interpreter object.
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    output=[]
+    def parse_obj(lt_objs):
+        # loop over the object list
+        for obj in lt_objs:
+            # if it's a textbox, print text and location
+            if isinstance(obj, pdfminer.layout.LTTextBoxHorizontal):
+                # print(obj.bbox[0], obj.bbox[1], obj.get_text().replace('\n', '_'))
+                output.append([obj.bbox[0], obj.bbox[1], obj.bbox[2], obj.bbox[3],obj.get_text().replace('\n', '_')])
+            # if it's a container, recurse
+            elif isinstance(obj, pdfminer.layout.LTFigure):
+                parse_obj(obj._objs)
+                output.append(parse_obj(obj._objs))
+    # loop over all pages in the document
+    for page in PDFPage.create_pages(document):
+        # read the page into a layout object
+        interpreter.process_page(page)
+        layout = device.get_result()
+        # extract text from this object
+        parse_obj(layout._objs)
+
+    x0=0
+    x1=0
+    x2=0
+    x3=0
+    x4=0
+    x5=0
+    x6=0
+    x7=0
+    # print(output)
+
+    for i in output:
+        if i!=None:
+            if 'Transaction Date Value Date_' == i[4]:
+                x0=i[0] + tol_diff + 70
+                x1=i[2] + tol_diff
+            if 'Particulars_' == i[4]:
+                x2=i[2] + tol_diff + 50
+            if 'Cheque _No_' == i[4]:
+                x3=i[2] + tol_diff + 10
+            if "Debit_" == i[4]:
+                x4=i[2] + tol_diff + 10
+            if "Credit_" == i[4]:
+                x5=i[2] + tol_diff + 5
+            # if "Balance_" == i[4]:
+            #     x6=i[2] + tol_diff
+
+    print([x0,x1,x2,x3,x4,x5])
+
+    return [x0,x1,x2,x3,x4,x5]
+
+def parse_idfc(path):
+    print("File name: ", path)
+    tolerance=10
+    columns=getcoord2(path,tolerance)
+
+    
+    pdf = PyPDF2.PdfReader(open(path,'rb'))
+    # pdf.decrypt(b'CONS866823038')
+    pages=len(pdf.pages)
+
+    text = pdf.pages[0].extract_text()
+
+
+    a_num=get_account_number(text)
+    arr= []
+    for p in range(1,pages+1):
+
+        x=tabula.read_pdf(path,guess=False,stream=False,columns=columns,pages=p,multiple_tables=True,pandas_options={'header':None},encoding= 'unicode_escape')
+
+        for i in x:
+            i=i.fillna(0)
+
+            # with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+            #     print(i)
+            # print(i)
+            for j in range(0,len(i)):
+                    flag=0
+
+                    try:
+                        sonata(i[0][j])
+                        total=i[6][j]
+
+                        flag=1
+
+                        if total==0:
+                            flag=0
+
+                    except Exception: pass
+
+
+                    if flag!=0:
+
+                        date=sonata(i[0][j])
+                        # print(date)
+
+                        transaction_value=0
+
+                        transaction_type=""
+
+                        # print(i[4][j])
+                        # print(type (i[4][j]))
+
+                        if getnumber(i[4][j])>0 and getnumber(i[5][j]) == 0:
+                            transaction_value=getnumber(i[4][j])
+                            transaction_type="debit"
+
+                        if getnumber(i[5][j])>0 and getnumber(i[4][j])==0:
+                            transaction_value=getnumber(i[5][j])
+                            transaction_type="credit"
+
+
+                        desc = i[2][j]
+                        for k in range(1,4):
+                            try:
+                                val_1=float(i[4][j+k])+float(i[5][j+k])
+                                if val_1==0:
+                                    desc=desc + i[2][j+k]
+                            except Exception: break
+
+                        balance=getnumber(i[6][j])
+
+                        final_res={
+                            "accountNumber": a_num,
+                            "bankName":"IDFC Bank",
+                            "balance": float(balance),
+                            "date": date,
+                            "transactionValue":float(transaction_value),
+                            "transactionType": transaction_type,
+                            "description": desc.upper()
+                          }
+                        
+                        # print(final_res)
+                        arr.append(final_res)
+
+    # print(arr)
+    df = pd.DataFrame(arr)
+    print(df.info())
+    return df
+
+# AXIS
 def parse_axis(filename):
     
     print("file name",filename)
