@@ -163,6 +163,13 @@ if uploaded_file is not None:
         agent = create_pandas_dataframe_agent(chat, df, verbose=True)
         # print(agent)
 
+        st.download_button(
+            label="Download Categorised Transaction",
+            data=csv,
+            file_name='bank_data.csv',
+            mime='text/csv',
+        )   
+        
         # place buttons in one line
         col1, col2, col3, col4 = st.columns([1, 2, 2, 1])
         with col2:
@@ -280,36 +287,36 @@ if uploaded_file is not None:
                             message("Sorry, unable to answer, try asking in a simpler way!", key=str(i), seed='Milo')
 
                     if top_debit_high_condn:
-                        top_df = df.loc[df["transactionType"] == "debit"]
-                        top_df["transactionValue"] = abs(top_df["transactionValue"])
-                        st.dataframe(top_df.nlargest(5, ['transactionValue']))
+                        top_df = df.loc[df["Transaction Type"] == "debit"]
+                        top_df["Transaction Amount"] = abs(top_df["Transaction Amount"])
+                        st.dataframe(top_df.nlargest(5, ['Transaction Amount']))
                     if top_credit_high_condn:
-                        st.dataframe(df.loc[df["transactionType"] == "credit"].nlargest(5, ['transactionValue']))
+                        st.dataframe(df.loc[df["Transaction Type"] == "credit"].nlargest(5, ['Transaction Amount']))
                     if top_high_condn:
                         top_df = df.copy()
-                        top_df["transactionValue"] = abs(top_df["transactionValue"])
-                        st.dataframe(top_df.nlargest(5, ['transactionValue']))
+                        top_df["Transaction Amount"] = abs(top_df["Transaction Amount"])
+                        st.dataframe(top_df.nlargest(5, ['Transaction Amount']))
                     if top_credit_condn:
-                        st.dataframe(df.loc[df["transactionType"] == "credit"].head())
+                        st.dataframe(df.loc[df["Transaction Type"] == "credit"].head())
                     if top_debit_condn:
-                        st.dataframe(df.loc[df["transactionType"] == "debit"].head())
+                        st.dataframe(df.loc[df["Transaction Type"] == "debit"].head())
                     if top_condn:
                         st.dataframe(df.head())
 
                     if low_debit_condn:
-                        top_df = df.loc[df["transactionType"] == "debit"]
-                        top_df["transactionValue"] = abs(top_df["transactionValue"])
-                        st.dataframe(top_df.nsmallest(5, ['transactionValue']))
+                        top_df = df.loc[df["Transaction Type"] == "debit"]
+                        top_df["Transaction Amount"] = abs(top_df["Transaction Amount"])
+                        st.dataframe(top_df.nsmallest(5, ['Transaction Amount']))
                     if low_credit_condn:
-                        st.dataframe(df.loc[df["transactionType"] == "credit"].nsmallest(5, ['transactionValue']))
+                        st.dataframe(df.loc[df["Transaction Type"] == "credit"].nsmallest(5, ['Transaction Amount']))
                     if low_condn:
                         top_df = df.copy()
-                        top_df["transactionValue"] = abs(top_df["transactionValue"])
-                        st.dataframe(top_df.nsmallest(5, ['transactionValue']))
+                        top_df["Transaction Amount"] = abs(top_df["Transaction Amount"])
+                        st.dataframe(top_df.nsmallest(5, ['Transaction Amount']))
                     if bottom_debit_condn:
-                        st.dataframe(df.loc[df["transactionType"] == "debit"].tail())
+                        st.dataframe(df.loc[df["Transaction Type"] == "debit"].tail())
                     if bottom_credit_condn:
-                        st.dataframe(df.loc[df["transactionType"] == "credit"].tail())
+                        st.dataframe(df.loc[df["Transaction Type"] == "credit"].tail())
                     if bottom_condn:
                         st.dataframe(df.tail())     
 
