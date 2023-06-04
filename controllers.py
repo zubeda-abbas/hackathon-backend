@@ -28,6 +28,7 @@ import pandas
 import numpy as np
 import requests
 import time
+from openpyxl import Workbook
 import math
 import io
 import re
@@ -41,6 +42,213 @@ nltk.download("stopwords")
 # nltk.download('omw-1.4')
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
+
+def Average(lst):
+    return sum(lst) / len(lst)
+
+def getUnit(x):
+    if x<10:
+        return str(0)+str(x)
+    else:
+        return x
+
+def set_report(df):
+    workbook = Workbook()
+    sheet = workbook.active
+    
+    no_trans_type={'credit':{'total_amount':0 ,'total_count':0},'debit':{'total_amount':0 ,'total_count':0}}
+
+    # totalcredit.groupby('Txn Date')
+    grp = df.groupby('Transaction Type')
+    for trn_type, group in grp:
+    #     print(trn_type)
+        if(trn_type =='credit'):
+            no_trans_type['credit']['total_amount']=sum(group['Transaction Amount'])
+            no_trans_type['credit']['total_count']=len(group['Transaction Amount'])
+            no_trans_type['credit']['highest']=max(group['Transaction Amount'])
+            no_trans_type['credit']['lowest']=round(Average(group['Transaction Amount']),2)
+        else:
+            no_trans_type['debit']['total_amount']=sum(group['Transaction Amount'])
+            no_trans_type['debit']['total_count']=len(group['Transaction Amount'])
+            no_trans_type['debit']['highest']=max(group['Transaction Amount'])
+            no_trans_type['debit']['lowest']=round(Average(group['Transaction Amount']),2)
+    #     print(sum(group['Transaction Amount']))
+    #     print(len(group['Transaction Amount']))
+    
+    # category wise transactions
+    cate_tran={}
+    grp2 = df.groupby('Category')
+    for trn_type, group in grp2:
+        cate_tran[trn_type]=len(group)
+        
+    df['month']=''
+    for x in df.index:
+        df.loc[x,'month']=df.loc[x,'Transaction Date'][0:-3]    
+    
+    newdata = df.sort_values(['Transaction Amount'],ascending=False).groupby(['month','Transaction Type'])
+    # top five credit,debit monthly
+    monthaly_data={}
+    grp3 = df.groupby(['month','Transaction Type'])
+    for trn_type, group in grp3:  
+        print(trn_type)
+        monthaly_data[trn_type]={'count':len(group),'amount':sum(group['Transaction Amount']),'max':max(group['Transaction Amount']),'min':min(group['Transaction Amount']),'avg':round(Average(group['Transaction Amount']),2)}
+    
+    # top five creditand debit by months 
+    for trn_type, group in newdata:
+        print(trn_type)
+        print(group.head())
+        
+    eod=pd.DataFrame()
+    
+    start_Date=df.loc[0,'Transaction Date']
+    end_Date=df.loc[len(df)-1,'Transaction Date']
+    print(end_Date)
+    
+    # eod['date']=''
+    eod['Transaction Date']=pd.date_range(start=start_Date,end=end_Date)
+    eod['Balance']=0
+    
+    di_mon={}
+    for put in df.index:
+        if(df.loc[put,'Transaction Date'] not in di_mon):
+            di_mon[df.loc[put,'Transaction Date']]=df.loc[put,'Balance']
+        else:
+            di_mon[df.loc[put,'Transaction Date']]=df.loc[put,'Balance']
+
+    for x in eod.index:
+        cuur=eod.loc[x][0]
+        uni=str(cuur.year)+'-'+str(getUnit(cuur.month)) +'-'+str(getUnit(cuur.day))
+        if(uni not in di_mon):
+            di_mon[uni]=0
+        
+        
+        # Create a new workbook
+    workbook = Workbook()
+
+    # Get the active sheet
+    sheet = workbook.active
+    sheet2 = workbook.create_sheet("monthly top five credit")  # Create a new sheet with a specific name
+    sheet3 = workbook.create_sheet("monthly top five debit")
+    # Define your dictionary
+
+    mon_overview_credit=[
+    '',
+    'Total No. of Credit Transactions',
+    'Total Amount of Credit Transactions',
+    'Highest Transaction Value',
+    'Lowest Transaction Value',
+    'Average Balance',
+    ]
+
+    mon_overview_debit=[
+    '',
+    'Total No. of Debit Transactions',
+    'Total Amount of Debit Transactions',
+    'Highest Transaction Value',
+    'Lowest Transaction Value',
+    'Average Balance',
+    ]
+
+
+    for row in range(1,len(mon_overview_credit)+1):
+        sheet.cell(row=row, column=1, value=mon_overview_credit[row-1])
+
+    # iterate through month data 
+    itt=2
+    for key, value in monthaly_data.items(): #itrerate through col
+        if(key[-1]=='credit'):
+            #fill column
+
+            sheet.cell(row=1, column=itt, value=key[0])
+            sheet.cell(row=2, column=itt, value=value['count'])
+            sheet.cell(row=3, column=itt, value=value['amount'])
+            sheet.cell(row=4, column=itt, value=value['max'])
+            sheet.cell(row=5, column=itt, value=value['min'])
+            sheet.cell(row=6, column=itt, value=value['avg'])
+            itt+=1
+
+    new_row=10 #new table begin
+    for row in range(1,len(mon_overview_credit)+1):
+        sheet.cell(row=row+new_row, column=1, value=mon_overview_debit[row-1])        
+    itt2=2
+
+    for key, value in monthaly_data.items(): #itrerate through col
+        if(key[-1]=='debit'):
+            #fill column
+
+            sheet.cell(row=1+new_row, column=itt2, value=key[0])
+            sheet.cell(row=2+new_row, column=itt2, value=value['count'])
+            sheet.cell(row=3+new_row, column=itt2, value=value['amount'])
+            sheet.cell(row=4+new_row, column=itt2, value=value['max'])
+            sheet.cell(row=5+new_row, column=itt2, value=value['min'])
+            sheet.cell(row=6+new_row, column=itt2, value=value['avg'])
+            itt2+=1    
+
+    # Iterate over the dictionary and write key-value pairs to cells
+    sheet2 = workbook.create_sheet("Sheet 2") 
+    # Create a new sheet with a specific name
+    itt3=1
+    itt4=1
+
+    inrow=2
+    inrow2=2
+
+    sheet2.cell(row=1, column=1, value='month')   #set headings
+    sheet2.cell(row=1, column=2, value='Account Number')
+    sheet2.cell(row=1, column=3, value='Bank Name')
+    sheet2.cell(row=1, column=4, value='Transaction Date')
+    sheet2.cell(row=1, column=5, value='Transaction Amount')
+    sheet2.cell(row=1, column=6, value='Transaction Type')
+    sheet2.cell(row=1, column=7, value='Description')
+    sheet2.cell(row=1, column=8, value='Category')
+
+
+    sheet3.cell(row=1, column=1, value='month')   #set headings
+    sheet3.cell(row=1, column=2, value='Account Number')
+    sheet3.cell(row=1, column=3, value='Bank Name')
+    sheet3.cell(row=1, column=4, value='Transaction Date')
+    sheet3.cell(row=1, column=5, value='Transaction Amount')
+    sheet3.cell(row=1, column=6, value='Transaction Type')
+    sheet3.cell(row=1, column=7, value='Description')
+    sheet3.cell(row=1, column=8, value='Category')
+    for trn_type, group in newdata:
+        print(trn_type)
+    #     print(group.head())
+            #fill column
+
+        cu=group.head()    
+        if 'credit' in trn_type[-1]:
+            for x in cu.index:
+                #Account Number   Bank Name  balance        date  transactionValue  Transaction Type  description  \
+                sheet2.cell(row=inrow, column=1, value=trn_type[0])
+                sheet2.cell(row=inrow, column=2, value=cu.loc[x,'Account Number'])
+                sheet2.cell(row=inrow, column=3, value=cu.loc[x,'Bank Name'])
+                sheet2.cell(row=inrow, column=4, value=cu.loc[x,'Balance'])
+                sheet2.cell(row=inrow, column=5, value=cu.loc[x,'Transaction Date'])
+                sheet2.cell(row=inrow, column=6, value=cu.loc[x,'Transaction Amount'])
+                sheet2.cell(row=inrow, column=7, value=cu.loc[x,'Transaction Type'])
+                sheet2.cell(row=inrow, column=8, value=cu.loc[x,'Description'])
+                sheet2.cell(row=inrow, column=9, value=cu.loc[x,'Category'])
+                inrow+=1
+        else:       
+            for y in cu.index:
+                #Account Number   Bank Name  Balance        date  transactionValue  Transaction Type  description  \
+                sheet3.cell(row=inrow2, column=1, value=trn_type[0])
+                sheet3.cell(row=inrow2, column=2, value=cu.loc[y,'Account Number'])
+                sheet3.cell(row=inrow2, column=3, value=cu.loc[y,'Bank Name'])
+                sheet3.cell(row=inrow2, column=4, value=cu.loc[y,'Balance'])
+                sheet3.cell(row=inrow2, column=5, value=cu.loc[y,'Transaction Date'])
+                sheet3.cell(row=inrow2, column=6, value=cu.loc[y,'Transaction Amount'])
+                sheet3.cell(row=inrow2, column=7, value=cu.loc[y,'Transaction Type'])
+                sheet3.cell(row=inrow2, column=8, value=cu.loc[y,'Description'])
+                sheet3.cell(row=inrow2, column=9, value=cu.loc[y,'Category'])
+                inrow2+=1
+
+
+
+
+    # Save the workbook
+    workbook.save("overall_report.xlsx")
 
 def validateJSON(jsonData):
     try:
@@ -92,7 +300,7 @@ def getnumber(text):
         return result * -1
     return result
 
-# get accountNumber for any bank out 5
+# get Account Number for any bank out 5
 def get_account_number(text):
     listbyline=text.split('\n')
     account_no=''
@@ -422,7 +630,7 @@ def parse_icici(path):
                             "Description": desc.upper()
                           }
                         
-                        print(final_res)
+                        # print(final_res)
                         arr.append(final_res)
 
     df = pd.DataFrame(arr)
@@ -684,14 +892,14 @@ def parse_axis(filename):
     df_big = df_big.set_index(pd.Index(new_ind)) #set new index for df        
     
     df_big.drop(['Chq No','Branch Name','Chq No','Value Date'], axis=1, inplace=True) #unwanted column removed
-    df_big["transactionType"] = ""
+    df_big["Transaction Type"] = ""
     df_big.loc[df_big["DR/CR"] == 'DR', "transactionType"] = "debit"
     df_big.loc[df_big["DR/CR"] == 'CR', "transactionType"] = "credit"
 
     df_big.drop('DR/CR',axis=1, inplace=True)
         
     df_big = df_big.set_axis(['Transaction Date','Description', 'Balance', 'Transaction Amount', 'Transaction Type'], axis=1)
-    df_big['bankName']='AXIS Bank'
+    df_big['Bank Name']='AXIS Bank'
     
     removepoint=0
     for x in df_big.index:

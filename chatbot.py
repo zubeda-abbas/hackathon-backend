@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 from streamlit_chat import message
 
-from controllers import (validateJSON, get_bankname, parse_sbi, parse_axis, parse_hdfc, parse_icici, parse_idfc, bank_classifier_predict)
+from controllers import (validateJSON, get_bankname, parse_sbi, parse_axis, parse_hdfc, parse_icici, parse_idfc, bank_classifier_predict, set_report)
 
 load_dotenv()
 
@@ -162,23 +162,27 @@ if uploaded_file is not None:
         chat = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0)
         agent = create_pandas_dataframe_agent(chat, df, verbose=True)
         # print(agent)
+ 
 
-        st.download_button(
-            label="Download Categorised Transaction",
-            data=csv,
-            file_name='bank_data.csv',
-            mime='text/csv',
-        )   
-        
+        cols1, cols2, cols3 = st.columns([1, 2, 1])
+        with cols2:
+            st.download_button(
+                label="Download Categorised Transaction",
+                data=csv,
+                file_name='bank_data.csv',
+                mime='text/csv',
+            )  
+
         # place buttons in one line
         col1, col2, col3, col4 = st.columns([1, 2, 2, 1])
+
         with col2:
-            st.download_button(
-                label="Generate Overall Report",
-                data=csv,
-                file_name='large_df.csv',
-                mime='text/csv',
-            )   
+            with open('overall_report.xlsx', 'rb') as f:
+                report_btn = st.download_button('Generate Overall Report', f, file_name='overall_report.xlsx')
+           
+            if report_btn:
+                set_report(df) 
+
         with col3:
             # st.button("Generate Overall Report", on_click="") 
             chat_btn = st.button("Let's Chat!")
